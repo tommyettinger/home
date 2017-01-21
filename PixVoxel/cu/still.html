@@ -1,0 +1,1870 @@
+
+<html>
+<head>
+<title>PixVoxel Demo</title>
+<style type="text/css">
+img {border:none; padding: 0px; margin-top: 20px;padding-right: 40px; outline: none;}
+.big img {border:none; padding: 0px; margin-top: -64px;padding-left: 12px; outline: none;}
+body {
+	background-image: url(tiling_flat.png);
+	background-position: -88px 16px;
+	margin: 0;
+}
+.normal td { padding: 0px; margin: 0px; height: 128px;border: none; }
+.normal tr { padding: 0px; margin: 0px; height: 128px;border: none; }
+.big td { margin-left: -64px; margin-top: -24px; padding: 0px; height: 256px;border: none; }
+.big tr { margin-left: -64px; margin-top: -24px; padding: 0px; height: 256px;border: none; }
+.normal table { border-collapse: collapse; display: inline; margin: 8px 0px 0px 122px;}
+.big table { border-collapse: collapse; display: inline; margin: -16px 0px 0px 92px;}
+.blackout {background: #333; width: 60%; margin:auto;}
+p {color: #fff; background: #333; font-family: 'Arial';}
+a {color: #f40; background: #333; font-family: 'Arial';}
+</style>
+</head><body>
+<div class="normal">
+<table>
+<tr>
+<td><img src="still/palette0_Civilian_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Civilian_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Civilian_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Civilian_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Civilian_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Civilian_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Civilian_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Civilian_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Civilian_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Civilian_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Civilian_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Civilian_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Civilian_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Civilian_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Civilian_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Civilian_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Civilian_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Civilian_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Civilian_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Civilian_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Civilian_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Civilian_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Civilian_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Civilian_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Civilian_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Civilian_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Civilian_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Civilian_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Civilian_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Civilian_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Civilian_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Civilian_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Infantry_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Infantry_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Infantry_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Infantry_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Infantry_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Infantry_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Infantry_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Infantry_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Infantry_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Infantry_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Infantry_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Infantry_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Infantry_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Infantry_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Infantry_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Infantry_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Infantry_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Infantry_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Infantry_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Infantry_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Infantry_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Infantry_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Infantry_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Infantry_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Infantry_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Infantry_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Infantry_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Infantry_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Infantry_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Infantry_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Infantry_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Infantry_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Infantry_P_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Infantry_P_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Infantry_P_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Infantry_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Infantry_P_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Infantry_P_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Infantry_P_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Infantry_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Infantry_P_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Infantry_P_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Infantry_P_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Infantry_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Infantry_P_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Infantry_P_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Infantry_P_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Infantry_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Infantry_P_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Infantry_P_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Infantry_P_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Infantry_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Infantry_P_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Infantry_P_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Infantry_P_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Infantry_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Infantry_P_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Infantry_P_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Infantry_P_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Infantry_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Infantry_P_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Infantry_P_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Infantry_P_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Infantry_P_Large_face3_0.png" /></td>
+</tr><tr>
+<td><img src="still/palette0_Infantry_S_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Infantry_S_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Infantry_S_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Infantry_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Infantry_S_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Infantry_S_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Infantry_S_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Infantry_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Infantry_S_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Infantry_S_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Infantry_S_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Infantry_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Infantry_S_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Infantry_S_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Infantry_S_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Infantry_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Infantry_S_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Infantry_S_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Infantry_S_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Infantry_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Infantry_S_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Infantry_S_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Infantry_S_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Infantry_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Infantry_S_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Infantry_S_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Infantry_S_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Infantry_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Infantry_S_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Infantry_S_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Infantry_S_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Infantry_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Infantry_T_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Infantry_T_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Infantry_T_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Infantry_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Infantry_T_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Infantry_T_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Infantry_T_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Infantry_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Infantry_T_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Infantry_T_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Infantry_T_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Infantry_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Infantry_T_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Infantry_T_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Infantry_T_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Infantry_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Infantry_T_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Infantry_T_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Infantry_T_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Infantry_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Infantry_T_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Infantry_T_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Infantry_T_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Infantry_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Infantry_T_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Infantry_T_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Infantry_T_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Infantry_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Infantry_T_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Infantry_T_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Infantry_T_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Infantry_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Infantry_PS_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Infantry_PS_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Infantry_PS_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Infantry_PS_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Infantry_PS_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Infantry_PS_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Infantry_PS_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Infantry_PS_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Infantry_PS_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Infantry_PS_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Infantry_PS_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Infantry_PS_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Infantry_PS_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Infantry_PS_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Infantry_PS_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Infantry_PS_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Infantry_PS_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Infantry_PS_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Infantry_PS_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Infantry_PS_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Infantry_PS_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Infantry_PS_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Infantry_PS_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Infantry_PS_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Infantry_PS_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Infantry_PS_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Infantry_PS_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Infantry_PS_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Infantry_PS_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Infantry_PS_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Infantry_PS_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Infantry_PS_Large_face3_0.png" /></td>
+</tr><tr>
+<td><img src="still/palette0_Infantry_PT_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Infantry_PT_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Infantry_PT_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Infantry_PT_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Infantry_PT_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Infantry_PT_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Infantry_PT_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Infantry_PT_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Infantry_PT_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Infantry_PT_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Infantry_PT_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Infantry_PT_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Infantry_PT_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Infantry_PT_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Infantry_PT_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Infantry_PT_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Infantry_PT_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Infantry_PT_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Infantry_PT_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Infantry_PT_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Infantry_PT_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Infantry_PT_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Infantry_PT_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Infantry_PT_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Infantry_PT_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Infantry_PT_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Infantry_PT_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Infantry_PT_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Infantry_PT_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Infantry_PT_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Infantry_PT_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Infantry_PT_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Infantry_ST_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Infantry_ST_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Infantry_ST_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Infantry_ST_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Infantry_ST_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Infantry_ST_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Infantry_ST_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Infantry_ST_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Infantry_ST_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Infantry_ST_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Infantry_ST_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Infantry_ST_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Infantry_ST_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Infantry_ST_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Infantry_ST_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Infantry_ST_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Infantry_ST_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Infantry_ST_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Infantry_ST_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Infantry_ST_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Infantry_ST_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Infantry_ST_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Infantry_ST_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Infantry_ST_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Infantry_ST_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Infantry_ST_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Infantry_ST_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Infantry_ST_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Infantry_ST_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Infantry_ST_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Infantry_ST_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Infantry_ST_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Tank_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Tank_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Tank_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Tank_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Tank_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Tank_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Tank_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Tank_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Tank_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Tank_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Tank_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Tank_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Tank_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Tank_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Tank_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Tank_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Tank_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Tank_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Tank_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Tank_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Tank_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Tank_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Tank_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Tank_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Tank_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Tank_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Tank_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Tank_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Tank_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Tank_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Tank_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Tank_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Tank_P_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Tank_P_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Tank_P_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Tank_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Tank_P_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Tank_P_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Tank_P_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Tank_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Tank_P_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Tank_P_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Tank_P_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Tank_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Tank_P_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Tank_P_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Tank_P_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Tank_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Tank_P_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Tank_P_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Tank_P_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Tank_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Tank_P_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Tank_P_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Tank_P_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Tank_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Tank_P_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Tank_P_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Tank_P_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Tank_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Tank_P_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Tank_P_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Tank_P_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Tank_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Tank_S_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Tank_S_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Tank_S_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Tank_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Tank_S_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Tank_S_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Tank_S_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Tank_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Tank_S_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Tank_S_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Tank_S_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Tank_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Tank_S_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Tank_S_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Tank_S_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Tank_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Tank_S_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Tank_S_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Tank_S_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Tank_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Tank_S_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Tank_S_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Tank_S_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Tank_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Tank_S_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Tank_S_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Tank_S_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Tank_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Tank_S_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Tank_S_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Tank_S_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Tank_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Tank_T_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Tank_T_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Tank_T_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Tank_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Tank_T_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Tank_T_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Tank_T_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Tank_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Tank_T_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Tank_T_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Tank_T_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Tank_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Tank_T_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Tank_T_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Tank_T_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Tank_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Tank_T_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Tank_T_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Tank_T_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Tank_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Tank_T_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Tank_T_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Tank_T_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Tank_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Tank_T_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Tank_T_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Tank_T_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Tank_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Tank_T_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Tank_T_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Tank_T_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Tank_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Artillery_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Artillery_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Artillery_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Artillery_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Artillery_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Artillery_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Artillery_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Artillery_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Artillery_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Artillery_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Artillery_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Artillery_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Artillery_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Artillery_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Artillery_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Artillery_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Artillery_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Artillery_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Artillery_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Artillery_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Artillery_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Artillery_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Artillery_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Artillery_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Artillery_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Artillery_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Artillery_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Artillery_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Artillery_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Artillery_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Artillery_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Artillery_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Artillery_P_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Artillery_P_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Artillery_P_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Artillery_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Artillery_P_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Artillery_P_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Artillery_P_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Artillery_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Artillery_P_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Artillery_P_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Artillery_P_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Artillery_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Artillery_P_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Artillery_P_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Artillery_P_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Artillery_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Artillery_P_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Artillery_P_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Artillery_P_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Artillery_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Artillery_P_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Artillery_P_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Artillery_P_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Artillery_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Artillery_P_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Artillery_P_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Artillery_P_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Artillery_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Artillery_P_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Artillery_P_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Artillery_P_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Artillery_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Artillery_S_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Artillery_S_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Artillery_S_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Artillery_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Artillery_S_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Artillery_S_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Artillery_S_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Artillery_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Artillery_S_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Artillery_S_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Artillery_S_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Artillery_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Artillery_S_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Artillery_S_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Artillery_S_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Artillery_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Artillery_S_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Artillery_S_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Artillery_S_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Artillery_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Artillery_S_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Artillery_S_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Artillery_S_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Artillery_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Artillery_S_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Artillery_S_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Artillery_S_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Artillery_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Artillery_S_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Artillery_S_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Artillery_S_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Artillery_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Artillery_T_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Artillery_T_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Artillery_T_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Artillery_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Artillery_T_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Artillery_T_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Artillery_T_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Artillery_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Artillery_T_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Artillery_T_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Artillery_T_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Artillery_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Artillery_T_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Artillery_T_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Artillery_T_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Artillery_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Artillery_T_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Artillery_T_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Artillery_T_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Artillery_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Artillery_T_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Artillery_T_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Artillery_T_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Artillery_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Artillery_T_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Artillery_T_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Artillery_T_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Artillery_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Artillery_T_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Artillery_T_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Artillery_T_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Artillery_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Copter_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Copter_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Copter_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Copter_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Copter_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Copter_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Copter_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Copter_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Copter_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Copter_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Copter_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Copter_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Copter_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Copter_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Copter_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Copter_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Copter_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Copter_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Copter_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Copter_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Copter_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Copter_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Copter_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Copter_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Copter_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Copter_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Copter_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Copter_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Copter_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Copter_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Copter_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Copter_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Copter_P_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Copter_P_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Copter_P_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Copter_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Copter_P_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Copter_P_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Copter_P_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Copter_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Copter_P_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Copter_P_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Copter_P_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Copter_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Copter_P_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Copter_P_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Copter_P_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Copter_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Copter_P_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Copter_P_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Copter_P_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Copter_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Copter_P_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Copter_P_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Copter_P_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Copter_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Copter_P_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Copter_P_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Copter_P_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Copter_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Copter_P_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Copter_P_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Copter_P_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Copter_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Copter_S_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Copter_S_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Copter_S_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Copter_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Copter_S_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Copter_S_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Copter_S_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Copter_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Copter_S_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Copter_S_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Copter_S_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Copter_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Copter_S_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Copter_S_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Copter_S_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Copter_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Copter_S_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Copter_S_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Copter_S_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Copter_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Copter_S_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Copter_S_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Copter_S_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Copter_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Copter_S_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Copter_S_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Copter_S_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Copter_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Copter_S_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Copter_S_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Copter_S_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Copter_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Copter_T_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Copter_T_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Copter_T_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Copter_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Copter_T_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Copter_T_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Copter_T_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Copter_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Copter_T_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Copter_T_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Copter_T_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Copter_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Copter_T_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Copter_T_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Copter_T_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Copter_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Copter_T_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Copter_T_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Copter_T_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Copter_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Copter_T_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Copter_T_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Copter_T_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Copter_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Copter_T_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Copter_T_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Copter_T_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Copter_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Copter_T_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Copter_T_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Copter_T_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Copter_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Plane_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Plane_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Plane_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Plane_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Plane_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Plane_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Plane_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Plane_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Plane_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Plane_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Plane_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Plane_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Plane_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Plane_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Plane_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Plane_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Plane_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Plane_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Plane_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Plane_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Plane_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Plane_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Plane_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Plane_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Plane_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Plane_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Plane_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Plane_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Plane_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Plane_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Plane_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Plane_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Plane_P_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Plane_P_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Plane_P_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Plane_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Plane_P_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Plane_P_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Plane_P_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Plane_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Plane_P_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Plane_P_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Plane_P_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Plane_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Plane_P_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Plane_P_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Plane_P_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Plane_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Plane_P_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Plane_P_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Plane_P_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Plane_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Plane_P_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Plane_P_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Plane_P_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Plane_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Plane_P_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Plane_P_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Plane_P_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Plane_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Plane_P_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Plane_P_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Plane_P_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Plane_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Plane_S_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Plane_S_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Plane_S_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Plane_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Plane_S_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Plane_S_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Plane_S_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Plane_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Plane_S_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Plane_S_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Plane_S_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Plane_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Plane_S_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Plane_S_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Plane_S_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Plane_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Plane_S_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Plane_S_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Plane_S_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Plane_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Plane_S_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Plane_S_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Plane_S_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Plane_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Plane_S_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Plane_S_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Plane_S_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Plane_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Plane_S_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Plane_S_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Plane_S_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Plane_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Plane_T_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Plane_T_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Plane_T_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Plane_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Plane_T_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Plane_T_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Plane_T_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Plane_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Plane_T_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Plane_T_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Plane_T_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Plane_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Plane_T_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Plane_T_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Plane_T_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Plane_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Plane_T_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Plane_T_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Plane_T_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Plane_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Plane_T_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Plane_T_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Plane_T_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Plane_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Plane_T_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Plane_T_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Plane_T_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Plane_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Plane_T_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Plane_T_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Plane_T_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Plane_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Supply_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Supply_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Supply_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Supply_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Supply_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Supply_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Supply_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Supply_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Supply_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Supply_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Supply_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Supply_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Supply_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Supply_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Supply_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Supply_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Supply_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Supply_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Supply_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Supply_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Supply_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Supply_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Supply_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Supply_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Supply_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Supply_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Supply_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Supply_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Supply_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Supply_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Supply_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Supply_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Supply_P_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Supply_P_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Supply_P_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Supply_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Supply_P_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Supply_P_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Supply_P_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Supply_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Supply_P_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Supply_P_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Supply_P_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Supply_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Supply_P_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Supply_P_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Supply_P_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Supply_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Supply_P_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Supply_P_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Supply_P_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Supply_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Supply_P_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Supply_P_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Supply_P_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Supply_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Supply_P_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Supply_P_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Supply_P_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Supply_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Supply_P_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Supply_P_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Supply_P_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Supply_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Supply_S_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Supply_S_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Supply_S_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Supply_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Supply_S_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Supply_S_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Supply_S_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Supply_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Supply_S_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Supply_S_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Supply_S_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Supply_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Supply_S_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Supply_S_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Supply_S_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Supply_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Supply_S_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Supply_S_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Supply_S_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Supply_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Supply_S_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Supply_S_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Supply_S_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Supply_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Supply_S_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Supply_S_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Supply_S_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Supply_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Supply_S_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Supply_S_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Supply_S_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Supply_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Supply_T_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Supply_T_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Supply_T_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Supply_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Supply_T_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Supply_T_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Supply_T_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Supply_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Supply_T_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Supply_T_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Supply_T_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Supply_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Supply_T_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Supply_T_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Supply_T_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Supply_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Supply_T_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Supply_T_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Supply_T_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Supply_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Supply_T_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Supply_T_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Supply_T_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Supply_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Supply_T_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Supply_T_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Supply_T_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Supply_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Supply_T_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Supply_T_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Supply_T_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Supply_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Boat_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Boat_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Boat_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Boat_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Boat_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Boat_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Boat_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Boat_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Boat_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Boat_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Boat_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Boat_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Boat_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Boat_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Boat_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Boat_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Boat_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Boat_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Boat_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Boat_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Boat_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Boat_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Boat_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Boat_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Boat_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Boat_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Boat_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Boat_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Boat_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Boat_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Boat_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Boat_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Boat_P_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Boat_P_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Boat_P_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Boat_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Boat_P_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Boat_P_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Boat_P_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Boat_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Boat_P_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Boat_P_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Boat_P_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Boat_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Boat_P_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Boat_P_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Boat_P_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Boat_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Boat_P_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Boat_P_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Boat_P_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Boat_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Boat_P_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Boat_P_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Boat_P_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Boat_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Boat_P_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Boat_P_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Boat_P_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Boat_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Boat_P_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Boat_P_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Boat_P_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Boat_P_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Boat_S_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Boat_S_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Boat_S_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Boat_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Boat_S_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Boat_S_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Boat_S_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Boat_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Boat_S_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Boat_S_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Boat_S_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Boat_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Boat_S_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Boat_S_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Boat_S_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Boat_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Boat_S_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Boat_S_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Boat_S_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Boat_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Boat_S_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Boat_S_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Boat_S_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Boat_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Boat_S_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Boat_S_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Boat_S_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Boat_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Boat_S_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Boat_S_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Boat_S_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Boat_S_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Boat_T_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Boat_T_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Boat_T_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Boat_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Boat_T_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Boat_T_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Boat_T_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Boat_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Boat_T_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Boat_T_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Boat_T_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Boat_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Boat_T_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Boat_T_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Boat_T_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Boat_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Boat_T_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Boat_T_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Boat_T_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Boat_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Boat_T_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Boat_T_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Boat_T_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Boat_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Boat_T_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Boat_T_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Boat_T_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Boat_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Boat_T_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Boat_T_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Boat_T_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Boat_T_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_City_Large_face0_0.png" /></td>
+<td><img src="still/palette0_City_Large_face1_0.png" /></td>
+<td><img src="still/palette0_City_Large_face2_0.png" /></td>
+<td><img src="still/palette0_City_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_City_Large_face0_0.png" /></td>
+<td><img src="still/palette1_City_Large_face1_0.png" /></td>
+<td><img src="still/palette1_City_Large_face2_0.png" /></td>
+<td><img src="still/palette1_City_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_City_Large_face0_0.png" /></td>
+<td><img src="still/palette2_City_Large_face1_0.png" /></td>
+<td><img src="still/palette2_City_Large_face2_0.png" /></td>
+<td><img src="still/palette2_City_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_City_Large_face0_0.png" /></td>
+<td><img src="still/palette3_City_Large_face1_0.png" /></td>
+<td><img src="still/palette3_City_Large_face2_0.png" /></td>
+<td><img src="still/palette3_City_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_City_Large_face0_0.png" /></td>
+<td><img src="still/palette4_City_Large_face1_0.png" /></td>
+<td><img src="still/palette4_City_Large_face2_0.png" /></td>
+<td><img src="still/palette4_City_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_City_Large_face0_0.png" /></td>
+<td><img src="still/palette5_City_Large_face1_0.png" /></td>
+<td><img src="still/palette5_City_Large_face2_0.png" /></td>
+<td><img src="still/palette5_City_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_City_Large_face0_0.png" /></td>
+<td><img src="still/palette6_City_Large_face1_0.png" /></td>
+<td><img src="still/palette6_City_Large_face2_0.png" /></td>
+<td><img src="still/palette6_City_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_City_Large_face0_0.png" /></td>
+<td><img src="still/palette7_City_Large_face1_0.png" /></td>
+<td><img src="still/palette7_City_Large_face2_0.png" /></td>
+<td><img src="still/palette7_City_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Factory_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Factory_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Factory_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Factory_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Factory_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Factory_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Factory_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Factory_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Factory_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Factory_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Factory_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Factory_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Factory_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Factory_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Factory_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Factory_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Factory_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Factory_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Factory_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Factory_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Factory_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Factory_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Factory_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Factory_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Factory_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Factory_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Factory_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Factory_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Factory_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Factory_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Factory_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Factory_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Airport_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Airport_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Airport_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Airport_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Airport_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Airport_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Airport_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Airport_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Airport_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Airport_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Airport_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Airport_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Airport_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Airport_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Airport_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Airport_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Airport_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Airport_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Airport_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Airport_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Airport_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Airport_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Airport_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Airport_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Airport_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Airport_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Airport_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Airport_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Airport_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Airport_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Airport_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Airport_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Dock_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Dock_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Dock_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Dock_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Dock_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Dock_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Dock_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Dock_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Dock_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Dock_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Dock_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Dock_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Dock_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Dock_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Dock_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Dock_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Dock_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Dock_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Dock_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Dock_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Dock_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Dock_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Dock_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Dock_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Dock_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Dock_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Dock_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Dock_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Dock_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Dock_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Dock_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Dock_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Laboratory_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Laboratory_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Laboratory_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Laboratory_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Laboratory_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Laboratory_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Laboratory_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Laboratory_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Laboratory_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Laboratory_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Laboratory_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Laboratory_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Castle_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Castle_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Castle_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Castle_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Castle_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Castle_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Castle_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Castle_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Castle_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Castle_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Castle_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Castle_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Castle_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Castle_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Castle_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Castle_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Castle_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Castle_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Castle_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Castle_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Castle_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Castle_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Castle_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Castle_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Castle_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Castle_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Castle_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Castle_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Castle_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Castle_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Castle_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Castle_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette0_Estate_Large_face0_0.png" /></td>
+<td><img src="still/palette0_Estate_Large_face1_0.png" /></td>
+<td><img src="still/palette0_Estate_Large_face2_0.png" /></td>
+<td><img src="still/palette0_Estate_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette1_Estate_Large_face0_0.png" /></td>
+<td><img src="still/palette1_Estate_Large_face1_0.png" /></td>
+<td><img src="still/palette1_Estate_Large_face2_0.png" /></td>
+<td><img src="still/palette1_Estate_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette2_Estate_Large_face0_0.png" /></td>
+<td><img src="still/palette2_Estate_Large_face1_0.png" /></td>
+<td><img src="still/palette2_Estate_Large_face2_0.png" /></td>
+<td><img src="still/palette2_Estate_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette3_Estate_Large_face0_0.png" /></td>
+<td><img src="still/palette3_Estate_Large_face1_0.png" /></td>
+<td><img src="still/palette3_Estate_Large_face2_0.png" /></td>
+<td><img src="still/palette3_Estate_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette4_Estate_Large_face0_0.png" /></td>
+<td><img src="still/palette4_Estate_Large_face1_0.png" /></td>
+<td><img src="still/palette4_Estate_Large_face2_0.png" /></td>
+<td><img src="still/palette4_Estate_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette5_Estate_Large_face0_0.png" /></td>
+<td><img src="still/palette5_Estate_Large_face1_0.png" /></td>
+<td><img src="still/palette5_Estate_Large_face2_0.png" /></td>
+<td><img src="still/palette5_Estate_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette6_Estate_Large_face0_0.png" /></td>
+<td><img src="still/palette6_Estate_Large_face1_0.png" /></td>
+<td><img src="still/palette6_Estate_Large_face2_0.png" /></td>
+<td><img src="still/palette6_Estate_Large_face3_0.png" /></td>
+</tr>
+<tr>
+<td><img src="still/palette7_Estate_Large_face0_0.png" /></td>
+<td><img src="still/palette7_Estate_Large_face1_0.png" /></td>
+<td><img src="still/palette7_Estate_Large_face2_0.png" /></td>
+<td><img src="still/palette7_Estate_Large_face3_0.png" /></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,505 @@
+
+<html>
+<head>
+<title>PixVoxel Demo</title>
+<style type="text/css">
+img {border:none; padding: 0px; margin-top: 20px;padding-right: 44px; outline: none;}
+.big img {border:none; padding: 0px; margin-top: 36px;margin-right: 96px;margin-left: -24px; outline: none;}
+.huge img {border:none; padding: 0px; padding-bottom: -20px; margin-top: -20px;margin-right: 96px;margin-left: -44px; outline: none;}
+.massive img {border:none; padding: 0px; margin-top: -20px;margin-right: 96px;margin-left: -64px; outline: none;}
+
+body {
+	background-image: url(tiling_small.png);
+	background-position: 0px 0px;
+	margin: 0;
+}
+td, tr { padding: 0px; margin: 0px; height: 128px;border: none; }
+table { border-collapse: collapse; display: inline; margin: 0px 0px 0px 84px;}
+.blackout {background: #333; width: 60%; margin:auto;}
+p {color: #fff; background: #333; font-family: 'Arial';}
+a {color: #f40; background: #333; font-family: 'Arial';}
+p, a {color: #fff; font-family: "Arial"; font-weight: bold; background-color: #444; text-align: center; }
+.gap
+{
+	margin-bottom: 0px;
+	font-size: 20px;
+	margin-left: -96px;
+	min-height: 0px;
+	max-height: 0px;
+	width: 100px;
+	position: relative;
+	overflow:visible;
+	display: inline-block;
+}
+.grid
+{
+	padding-top: 102px;
+	padding-bottom: 0;
+	padding-left: 108px;
+	padding-right: 0;
+}
+.row
+{
+	min-height: 24px;
+	max-height: 24px;
+	position: relative;
+	font-size: 0px;
+	overflow:visible;
+}
+.floor
+{
+	position: absolute;
+	font-size: 0px;
+	overflow:visible;
+}
+.big
+{
+	margin-left: 14px;
+}
+
+.terrain
+{
+	margin-left: -38px;
+	margin-top: 48px;
+}
+.isotile
+{
+	position: relative;
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	margin-left: 0px;
+	margin-top: 4px;
+}
+.bigtile
+{
+	position: relative;
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	margin-top: -40px;
+	top: -40px;
+}
+.tritile
+{
+	position: relative;
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	margin-left: 52px;
+	margin-top: -180px;
+	top: 48px;
+}
+.massive
+{
+	position: relative;
+	display: inline-block;
+	width: 176px;
+	height: 88px;
+	margin-left: 88px;
+	margin-top: -122px;
+	top: -16px;
+}
+.row:nth-of-type(2n-1)
+{
+	margin-left: 48px;
+}
+.floor:nth-of-type(4n+1)
+{
+	margin-top: -96px;
+}
+.floor:nth-of-type(4n+2)
+{
+	margin-top: -168px;
+}
+.floor:nth-of-type(4n+3)
+{
+	margin-top: -240px;
+}
+.floor:nth-of-type(4n+4)
+{
+	margin-top: -312px;
+}
+</style>
+</head>
+<body>
+<div class="grid">
+<div class="floor">
+<div class="row"></div>
+<div class="row"></div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Corner_Huge_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette47/palette47_Tree_Huge_animated.gif" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Corner_Huge_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Huge_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Door_Closed_Huge_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Huge_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Door_Closed_Huge_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Huge_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Huge_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Huge_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Huge_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Corner_Huge_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Corner_Huge_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Corner_Huge_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Corner_Huge_face3_0.png" /></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Door_Closed_Huge_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Huge_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Door_Closed_Huge_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Huge_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Huge_face3_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Door_Open_Huge_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Huge_face3_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Door_Open_Huge_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette47/palette47_Grass_Huge_animated.gif" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Corner_Huge_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette47/palette47_Grass_Huge_animated.gif" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette47/palette47_Grass_Huge_animated.gif" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Corner_Huge_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette47/palette47_Grass_Huge_animated.gif" /></div>
+</div>
+</div>
+<div class="floor">
+<div class="row"></div>
+<div class="row"></div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Corner_Huge_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Corner_Upper_Huge_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Straight_Huge_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Straight_Huge_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Upper_Huge_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Upper_Huge_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Straight_Huge_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Flat_Huge_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Straight_Huge_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Upper_Huge_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Upper_Huge_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Corner_Huge_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Flat_Huge_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Flat_Huge_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Corner_Huge_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Corner_Upper_Huge_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Corner_Upper_Huge_face3_0.png" /></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Straight_Huge_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Flat_Huge_face3_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Straight_Huge_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Upper_Huge_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Upper_Huge_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Straight_Huge_face3_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Straight_Huge_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Upper_Huge_face3_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Straight_Upper_Huge_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Corner_Huge_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Wall_Corner_Upper_Huge_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+</div>
+<div class="floor">
+<div class="row"></div>
+<div class="row"></div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Corner_Off_Huge_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Straight_Off_Huge_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Straight_Huge_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Straight_Off_Huge_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Flat_Huge_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Straight_Huge_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Corner_Huge_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Flat_Huge_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Flat_Huge_face3_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Corner_Huge_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Straight_Huge_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Flat_Huge_face3_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Straight_Off_Huge_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Straight_Huge_face3_0.png" /></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Straight_Off_Huge_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="allies/palette49/palette49_Roof_Solid_Corner_Off_Huge_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+</div>
+</div>
+</body>
+</html>
+

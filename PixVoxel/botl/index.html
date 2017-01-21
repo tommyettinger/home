@@ -1,0 +1,301 @@
+<html>
+<head>
+<title>PixVoxel Demo</title>
+<style type="text/css">
+img {border:none; padding: 0px; margin-top: 20px;padding-right: 44px; outline: none;}
+.big img {border:none; padding: 0px; margin-top: 36px;margin-right: 96px;margin-left: -24px; outline: none;}
+.huge img {border:none; padding: 0px; padding-bottom: -20px; margin-top: -20px;margin-right: 96px;margin-left: -44px; outline: none;}
+.massive img {border:none; padding: 0px; margin-top: -20px;margin-right: 96px;margin-left: -64px; outline: none;}
+
+body {
+	background-image: url(tiling_small.png);
+	background-position: 0px 0px;
+	margin: 0;
+}
+td, tr { padding: 0px; margin: 0px; height: 128px;border: none; }
+table { border-collapse: collapse; display: inline; margin: 0px 0px 0px 84px;}
+.blackout {background: #333; width: 60%; margin:auto;}
+p {color: #fff; background: #333; font-family: 'Arial';}
+a {color: #f40; background: #333; font-family: 'Arial';}
+p, a {color: #fff; font-family: "Arial"; font-weight: bold; background-color: #444; text-align: center; }
+.gap
+{
+	margin-bottom: 0px;
+	font-size: 18px;
+	margin-left: -270px;
+	min-height: 0px;
+	max-height: 0px;
+	width: 200px;
+	position: relative;
+	overflow:visible;
+	display: inline-block;
+}
+.over
+{
+	color: #fff;
+	background: #333;
+	margin-bottom: 0px;
+	font-size: 48px;
+	font-weight: bolder;
+	width: 500px;
+	height: 60px;
+	text-align: center;
+	position: absolute;
+	top: 50px;
+	right: 100px;
+	overflow:hidden;
+	display: block;
+}
+.grid
+{
+	padding-top: 60px;
+	padding-bottom: 0;
+	padding-left: 296px;
+	padding-right: 0;
+}
+.row
+{
+	min-height: 72px;
+	max-height: 72px;
+	width: 100%;
+	position: relative;
+	font-size: 0px;
+	overflow:visible;
+}
+.big
+{
+	margin-left: 14px;
+}
+
+.terrain
+{
+	margin-left: -40px;
+	margin-top: -80px;
+	padding-top: 24px;
+	margin-bottom: 128px;
+}
+.isotile
+{
+	vertical-align: top;
+	position: relative;
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	margin-top: -44px;
+}
+.bigtile
+{
+	position: relative;
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	margin-top: -40px;
+	top: -40px;
+}
+.tritile
+{
+	position: relative;
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	margin-left: 52px;
+	margin-top: -180px;
+}
+.massive
+{
+	position: relative;
+	display: inline-block;
+	width: 176px;
+	height: 88px;
+	margin-left: 88px;
+	margin-top: -122px;
+	top: -16px;
+}
+.row:nth-of-type(2n-1)
+{
+	margin-left: 44px;
+}
+</style>
+</head>
+<body>
+<div class="over">
+Bane of the Living
+</div>
+<div class="grid">
+<span class="gap"><p>The Necromancer</p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette65/palette65_Necromancer_Large_animated.gif" /></div>
+<div class="tritile"><img src="allies/palette65/palette65_Necromancer_explosion_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Zombie.html">Zombie</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette2/palette2_Zombie_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Skeleton.html">Skeleton</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette6/palette6_Skeleton_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Spirit.html">Spirit</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette7/palette7_Spirit_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Wraith.html">Wraith</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette8/palette8_Wraith_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Cinder.html">Cinder</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette9/palette9_Cinder_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Ghoul.html">Ghoul</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette39/palette39_Ghoul_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Wight.html">Wight</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette40/palette40_Wight_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Spectre.html">Spectre</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette42/palette42_Spectre_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Mummy.html">Mummy</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette43/palette43_Mummy_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Drowned.html">Drowned</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette45/palette45_Drowned_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Banshee.html">Banshee</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette46/palette46_Banshee_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Damned.html">Damned</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette63/palette63_Damned_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Husk.html">Husk</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette64/palette64_Husk_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Living_Men_A.html">Living Men part A</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette0/palette0_Generic_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Living_Men_B.html">Living Men part B</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette1/palette1_Generic_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Living_Men_C.html">Living Men part C</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette15/palette15_Generic_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Living_Men_D.html">Living Men part D</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette16/palette16_Generic_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Living_Men_E.html">Living Men part E</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette17/palette17_Generic_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Living_Women_A.html">Living Women part A</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette0/palette0_Generic_Female_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Living_Women_B.html">Living Women part B</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette1/palette1_Generic_Female_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Living_Women_C.html">Living Women part C</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette15/palette15_Generic_Female_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Living_Women_D.html">Living Women part D</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette16/palette16_Generic_Female_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Living_Women_E.html">Living Women part E</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette17/palette17_Generic_Female_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Bulky_Men_A.html">Bulky Men part A</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette0/palette0_Bulky_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Bulky_Men_B.html">Bulky Men part B</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette1/palette1_Bulky_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Bulky_Men_C.html">Bulky Men part C</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette15/palette15_Bulky_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Bulky_Men_D.html">Bulky Men part D</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette16/palette16_Bulky_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Bulky_Men_E.html">Bulky Men part E</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette17/palette17_Bulky_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Bulky_Women_A.html">Bulky Women part A</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette0/palette0_Bulky_Female_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Bulky_Women_B.html">Bulky Women part B</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette1/palette1_Bulky_Female_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Bulky_Women_C.html">Bulky Women part C</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette15/palette15_Bulky_Female_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Bulky_Women_D.html">Bulky Women part D</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette16/palette16_Bulky_Female_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Bulky_Women_E.html">Bulky Women part E</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette17/palette17_Bulky_Female_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Armored_Men_A.html">Armored Men part A</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette0/palette0_Armored_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Armored_Men_B.html">Armored Men part B</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette1/palette1_Armored_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Armored_Men_C.html">Armored Men part C</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette15/palette15_Armored_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Armored_Men_D.html">Armored Men part D</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette16/palette16_Armored_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Armored_Men_E.html">Armored Men part E</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette17/palette17_Armored_Male_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Beasts.html">Beasts</a></p></span>
+<div class="row">
+<div class="isotile"><img src="allies/palette5/palette5_Wolf_Large_animated.gif" /></div>
+</div>
+<span class="gap"><p><a href="Terrain.html">Terrain</a></p></span>
+  <div class="terrain">
+    <div class="row">
+      <div class="isotile"><img src="allies/palette47/palette47_Grass_Huge_animated.gif" /></div>
+    </div>
+  </div>
+<span class="gap"><p><a href="House.html">House Sample</a></p></span>
+  <div class="terrain">
+    <div class="row">
+      <div class="isotile"><img src="allies/palette49/palette49_Door_Closed_Huge_animated.gif" /></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

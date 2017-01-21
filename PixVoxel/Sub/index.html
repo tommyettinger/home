@@ -1,0 +1,213 @@
+
+<html>
+<head>
+<title>Kolonize graphics demo</title>
+<style type="text/css">
+img {border:none; padding: 0px; margin-left: 16px; margin-top: 24px;padding-right: 40px; outline: none;}
+.big img {border:none; padding: 0px; margin-top: 48px;margin-right: 128px;margin-left: -40px; outline: none;}
+.massive img {border:none; padding: 0px; margin-top: -40px;margin-right: 88px;margin-left: -120px; outline: none;}
+
+body {
+	background-image: url(tiling_flat.png);
+	background-position: -40px 0px;
+	margin: 0;
+}
+td, tr { padding: 0px; margin: 0px; height: 128px;border: none; }
+table { border-collapse: collapse; display: inline; margin: 0px 0px 0px 124px;}
+.blackout {background: #333; width: 60%; margin:auto;}
+p {color: #fff; background: #333; font-family: 'Arial';}
+a {color: #f40; background: #333; font-family: 'Arial';}
+p, a {color: #fff; font-family: "Arial"; font-weight: bold; background-color: #444; text-align: center; }
+.gap
+{
+	margin-bottom: 0px;
+	font-size: 20px;
+	margin-left: -100px;
+	min-height: 0px;
+	max-height: 0px;
+	width: 100px;
+	position: relative;
+	overflow:visible;
+	display: inline-block;
+}
+.grid
+{
+	padding: 100px;
+}
+.row
+{
+	min-height: 192px;
+	max-height: 192px;
+	width: 100%;
+	position: relative;
+	font-size: 0px;
+	overflow:visible;
+}
+.bigrow
+{
+	min-height: 192px;
+	max-height: 192px;
+	width: 100%;
+	position: relative;
+	font-size: 0px;
+	overflow:visible;
+}
+.big
+{
+	margin-left: 10px;
+}
+.isotile
+{
+	position: relative;
+	display: inline-block;
+	width: 64px;
+	height: 128px;
+	margin-top: -48px;
+	top: -48px;
+}
+.bigtile
+{
+	position: relative;
+	display: inline-block;
+	width: 128px;
+	height: 128px;
+	margin-top: -112px;
+	top: -112px;
+}
+.tritile
+{
+	position: relative;
+	display: inline-block;
+	width: 128px;
+	height: 128px;
+	left: -8px;
+	margin-top: -128px;
+	top: -8px;
+}
+.massive
+{
+	position: relative;
+	display: inline-block;
+	width: 256px;
+	height: 128px;
+	margin-left: 128px;
+	margin-top: -88px;
+	top: -16px;
+}
+.bigtile:nth-of-type(2n-1)
+{
+	top: -48px;
+}
+.isotile:nth-of-type(2n-1)
+{
+	top: -16px;
+}
+</style>
+<!-- 
+.row:nth-of-type(2n-1) .tritile
+{
+	margin-left: 128px;
+}
+
+.row:nth-of-type(2n-1)
+{
+	margin-left: 64px;
+}
+-->
+</head>
+<body>
+<section class="grid">
+<div class="row" >
+<div class="isotile"><img src="img/palette10(0)_Human_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette10(1)_Human_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette10(2)_Human_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette10(3)_Human_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette10(4)_Human_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette10(5)_Human_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette10(6)_Human_Female_animated.gif"   /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="img/palette0(0)_Human_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette0(1)_Human_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette0(2)_Human_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette0(3)_Human_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette0(4)_Human_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette0(5)_Human_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette0(6)_Human_Male_animated.gif"   /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="img/palette7(0)_Warrior_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette7(1)_Warrior_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette7(2)_Warrior_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette7(3)_Warrior_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette7(4)_Warrior_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette7(5)_Warrior_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette7(6)_Warrior_Female_animated.gif"   /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="img/palette7(0)_Warrior_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette7(1)_Warrior_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette7(2)_Warrior_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette7(3)_Warrior_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette7(4)_Warrior_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette7(5)_Warrior_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette7(6)_Warrior_Male_animated.gif"   /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="img/palette8(0)_Mage_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette8(1)_Mage_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette8(2)_Mage_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette8(3)_Mage_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette8(4)_Mage_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette8(5)_Mage_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette8(6)_Mage_Female_animated.gif"   /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="img/palette8(0)_Mage_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette8(1)_Mage_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette8(2)_Mage_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette8(3)_Mage_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette8(4)_Mage_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette8(5)_Mage_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette8(6)_Mage_Male_animated.gif"   /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="img/palette9(0)_Rogue_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette9(1)_Rogue_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette9(2)_Rogue_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette9(3)_Rogue_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette9(4)_Rogue_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette9(5)_Rogue_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette9(6)_Rogue_Female_animated.gif"   /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="img/palette1(0)_Rogue_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette1(1)_Rogue_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette1(2)_Rogue_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette1(3)_Rogue_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette1(4)_Rogue_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette1(5)_Rogue_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette1(6)_Rogue_Male_animated.gif"   /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="img/palette11(0)_Priest_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette11(1)_Priest_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette11(2)_Priest_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette11(3)_Priest_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette11(4)_Priest_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette11(5)_Priest_Male_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette11(6)_Priest_Male_animated.gif"   /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="img/palette11(0)_Priest_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette11(1)_Priest_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette11(2)_Priest_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette11(3)_Priest_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette11(4)_Priest_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette11(5)_Priest_Female_animated.gif"   /></div>
+<div class="isotile"><img src="img/palette11(6)_Priest_Female_animated.gif"   /></div>
+</div>
+</section>
+</body>
+</html>
+

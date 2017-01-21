@@ -1,0 +1,190 @@
+
+<html>
+<head>
+<title>Descent of the Machines graphics demo</title>
+<style type="text/css">
+img {border:none; padding: 0px; margin-top: 16px;padding-right: 40px; outline: none;}
+.big img {border:none; padding: 0px; margin-top: 48px;margin-right: 128px;margin-left: -40px; outline: none;}
+.massive img {border:none; padding: 0px; margin-top: -40px;margin-right: 88px;margin-left: -120px; outline: none;}
+
+body {
+	background-image: url(tiling_flat.png);
+	background-position: -40px 0px;
+	margin: 0;
+}
+td, tr { padding: 0px; margin: 0px; height: 128px;border: none; }
+table { border-collapse: collapse; display: inline; margin: 0px 0px 0px 124px;}
+.blackout {background: #333; width: 60%; margin:auto;}
+p {color: #fff; background: #333; font-family: 'Arial';}
+a {color: #f40; background: #333; font-family: 'Arial';}
+p, a {color: #fff; font-family: "Arial"; font-weight: bold; background-color: #444; text-align: center; }
+.gap
+{
+	margin-bottom: 0px;
+	font-size: 20px;
+	margin-left: -100px;
+	min-height: 0px;
+	max-height: 0px;
+	width: 100px;
+	position: relative;
+	overflow:visible;
+	display: inline-block;
+}
+.grid
+{
+	padding: 100px;
+}
+.row
+{
+	min-height: 192px;
+	max-height: 192px;
+	width: 100%;
+	position: relative;
+	font-size: 0px;
+	overflow:visible;
+}
+.bigrow
+{
+	min-height: 192px;
+	max-height: 192px;
+	width: 100%;
+	position: relative;
+	font-size: 0px;
+	overflow:visible;
+}
+.big
+{
+	margin-left: 10px;
+}
+.isotile
+{
+	position: relative;
+	display: inline-block;
+	width: 64px;
+	height: 128px;
+	margin-top: -48px;
+	top: -48px;
+}
+.bigtile
+{
+	position: relative;
+	display: inline-block;
+	width: 128px;
+	height: 128px;
+	margin-top: -112px;
+	top: -112px;
+}
+.tritile
+{
+	position: relative;
+	display: inline-block;
+	width: 128px;
+	height: 128px;
+	left: -8px;
+	margin-top: -128px;
+	top: -8px;
+}
+.massive
+{
+	position: relative;
+	display: inline-block;
+	width: 256px;
+	height: 128px;
+	margin-left: 128px;
+	margin-top: -88px;
+	top: -16px;
+}
+.bigtile:nth-of-type(2n-1)
+{
+	top: -48px;
+}
+.isotile:nth-of-type(2n-1)
+{
+	top: -16px;
+}
+.row:nth-of-type(2n-1) .tritile
+{
+	top: 24px;
+}
+
+</style>
+<!-- 
+.row:nth-of-type(2n-1) .tritile
+{
+	margin-left: 128px;
+}
+
+.row:nth-of-type(2n-1)
+{
+	margin-left: 64px;
+}
+
+<div class="row" >
+<div class="isotile"><img src="palette0/palette0_Mark_Zero_Large_animated.gif"                  /></div>
+<div class="isotile"><img src="palette0/palette0_Mark_Zero_Firing_Both_Large_animated.gif"      /></div>
+<div class="tritile"><img src="palette0/palette0_Mark_Zero_explosion_animated.gif"              /></div>
+<div class="tritile"><img src="palette0/palette0_Mark_Zero_Firing_Both_Beam_Huge_animated.gif"  /></div>
+<div class="tritile"><img src="palette0/palette0_Mark_Zero_Firing_Both_Lightning_Huge_animated.gif"  /></div>
+</div>
+-->
+</head>
+<body>
+<section class="grid">
+<div class="row" >
+<div class="isotile"><img src="palette0/palette0(0)_SYN-CC_animated.gif"                       /></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-CC_Explosion_animated.gif"                       /></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-CC_Firing_Left_Beam_animated.gif"      /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="palette0/palette0(0)_SYN-SK_animated.gif"                       /></div>
+<div class="isotile"><img src="palette0/palette0(0)_SYN-SK_Firing_Right_animated.gif"          /></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-SK_Explosion_animated.gif"                       /></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-SK_Firing_Left_Lightning_animated.gif" /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="palette0/palette0(0)_SYN-HV_animated.gif"                       /></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-HV_Explosion_animated.gif"                       /></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-HV_Firing_Right_Cannon_animated.gif"   /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="palette0/palette0(0)_SYN-RD_animated.gif"                       /></div>
+<div class="isotile"></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-RD_Explosion_animated.gif"                       /></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-V_Firing_Both_Autofire_Autofire_animated.gif"   /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="palette0/palette0(0)_SYN-TR_animated.gif"                       /></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-TR_Explosion_animated.gif"                       /></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-TR_Firing_Both_Autofire_animated.gif"   /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="palette0/palette0(0)_SYN-MM_animated.gif"                       /></div>
+<div class="isotile"></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-MM_Explosion_animated.gif"                       /></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-MM_Firing_Both_Beam_animated.gif"   /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="palette0/palette0(0)_SYN-V_animated.gif"                  /></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-V_Explosion_animated.gif"                  /></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-V_Firing_Both_Autofire_Autofire_animated.gif"/></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-V_Firing_Left_Autofire_animated.gif"/></div>
+<div class="tritile"><img src="palette0/palette0(0)_SYN-V_Firing_Right_Autofire_animated.gif"/></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="mythos/palette0(0)_Shoggoth_Spore_animated.gif"                  /></div>
+<div class="isotile"></div>
+<div class="tritile"><img src="mythos/palette0(0)_Shoggoth_Spore_Explosion_animated.gif"        /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="mythos/palette1(0)_Shoggoth_Spore_animated.gif"                  /></div>
+<div class="tritile"><img src="mythos/palette1(0)_Shoggoth_Spore_Explosion_animated.gif"        /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="mythos/palette2(0)_Shoggoth_Spore_animated.gif"                  /></div>
+<div class="isotile"></div>
+<div class="tritile"><img src="mythos/palette2(0)_Shoggoth_Spore_Explosion_animated.gif"        /></div>
+</div>
+</section>
+</body>
+</html>
+

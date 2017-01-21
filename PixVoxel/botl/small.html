@@ -1,0 +1,750 @@
+
+<html>
+<head>
+<title>PixVoxel Demo</title>
+<style type="text/css">
+img {border:none; padding: 0px; margin-top: 20px;padding-right: 44px; outline: none;}
+.big img {border:none; padding: 0px; margin-top: 36px;margin-right: 96px;margin-left: -24px; outline: none;}
+.huge img {border:none; padding: 0px; padding-bottom: -20px; margin-top: -20px;margin-right: 96px;margin-left: -44px; outline: none;}
+.massive img {border:none; padding: 0px; margin-top: -20px;margin-right: 96px;margin-left: -64px; outline: none;}
+
+body {
+	background-image: url(tiling_small.png);
+	background-position: 0px 16px;
+	margin: 0;
+}
+td, tr { padding: 0px; margin: 0px; height: 128px;border: none; }
+table { border-collapse: collapse; display: inline; margin: 0px 0px 0px 84px;}
+.blackout {background: #333; width: 60%; margin:auto;}
+p {color: #fff; background: #333; font-family: 'Arial';}
+a {color: #f40; background: #333; font-family: 'Arial';}
+p, a {color: #fff; font-family: "Arial"; font-weight: bold; background-color: #444; text-align: center; }
+.gap
+{
+	margin-bottom: 0px;
+	font-size: 20px;
+	margin-left: -100px;
+	min-height: 0px;
+	max-height: 0px;
+	width: 100px;
+	position: relative;
+	overflow:visible;
+	display: inline-block;
+}
+.grid
+{
+	padding-top: 12px;
+	padding-bottom: 0;
+	padding-left: 100px;
+	padding-right: 0;
+}
+.row
+{
+	min-height: 24px;
+	max-height: 24px;
+	width: 100%;
+	position: relative;
+	font-size: 0px;
+	overflow:visible;
+}
+.big
+{
+	margin-left: 14px;
+}
+.isotile
+{
+	position: relative;
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	margin-top: -44px;
+}
+.bigtile
+{
+	position: relative;
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	margin-top: -40px;
+	top: -40px;
+}
+.tritile
+{
+	position: relative;
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	margin-left: 52px;
+	margin-top: -180px;
+	top: 48px;
+}
+.massive
+{
+	position: relative;
+	display: inline-block;
+	width: 176px;
+	height: 88px;
+	margin-left: 88px;
+	margin-top: -122px;
+	top: -16px;
+}
+.row:nth-of-type(2n-1)
+{
+	margin-left: 44px;
+}
+</style>
+</head>
+<body>
+<div class="grid">
+<div class="row">
+<div class="isotile"><img src="allies/palette2_Zombie_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Zombie_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette2_Zombie_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette2_Zombie_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Zombie_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette2_Zombie_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette2_Zombie_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Zombie_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette2_Zombie_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette2_Zombie_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Zombie_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette2_Zombie_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette2_Zombie_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Zombie_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Zombie_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette2_Zombie_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette6_Skeleton_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Skeleton_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette6_Skeleton_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette6_Skeleton_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Skeleton_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette6_Skeleton_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette6_Skeleton_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Skeleton_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette6_Skeleton_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette6_Skeleton_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Skeleton_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette6_Skeleton_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette6_Skeleton_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Skeleton_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette6_Skeleton_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette6_Skeleton_Spear_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette6_Skeleton_Spear_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette6_Skeleton_Spear_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette6_Skeleton_Spear_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette6_Skeleton_Spear_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette6_Skeleton_Spear_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette6_Skeleton_Spear_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette6_Skeleton_Spear_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette6_Skeleton_Spear_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Skeleton_Spear_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette6_Skeleton_Spear_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette7_Spirit_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Spirit_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette7_Spirit_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette7_Spirit_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Spirit_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette7_Spirit_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette7_Spirit_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Spirit_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette7_Spirit_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette7_Spirit_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Spirit_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette7_Spirit_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette7_Spirit_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Spirit_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Spirit_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette7_Spirit_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette8_Wraith_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Wraith_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette8_Wraith_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette8_Wraith_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Wraith_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette8_Wraith_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette8_Wraith_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Wraith_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette8_Wraith_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette8_Wraith_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Wraith_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette8_Wraith_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette8_Wraith_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Wraith_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Wraith_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette8_Wraith_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette9_Cinder_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Cinder_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette9_Cinder_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette9_Cinder_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Cinder_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette9_Cinder_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette9_Cinder_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Cinder_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette9_Cinder_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette9_Cinder_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Cinder_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette9_Cinder_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette9_Cinder_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Cinder_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Cinder_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette9_Cinder_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette7_Spectral_Knight_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/Spectral_Knight_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/Spectral_Knight_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/Spectral_Knight_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/Spectral_Knight_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette7_Spectral_Knight_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette0_Generic_Male_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette0_Generic_Male_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette0_Generic_Male_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette0_Generic_Male_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette0_Generic_Male_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette0_Generic_Male_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette0_Generic_Male_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette0_Generic_Male_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette0_Generic_Male_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Male_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette0_Generic_Male_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette1_Generic_Male_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette1_Generic_Male_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette1_Generic_Male_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette1_Generic_Male_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette1_Generic_Male_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette1_Generic_Male_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette1_Generic_Male_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette1_Generic_Male_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette1_Generic_Male_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Male_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette1_Generic_Male_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette15_Generic_Male_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette15_Generic_Male_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette15_Generic_Male_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette15_Generic_Male_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette15_Generic_Male_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette15_Generic_Male_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette15_Generic_Male_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette15_Generic_Male_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette15_Generic_Male_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Male_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette15_Generic_Male_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette16_Generic_Male_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette16_Generic_Male_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette16_Generic_Male_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette16_Generic_Male_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette16_Generic_Male_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette16_Generic_Male_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette16_Generic_Male_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette16_Generic_Male_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette16_Generic_Male_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Male_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette16_Generic_Male_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette17_Generic_Male_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette17_Generic_Male_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette17_Generic_Male_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette17_Generic_Male_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette17_Generic_Male_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette17_Generic_Male_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette17_Generic_Male_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette17_Generic_Male_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette17_Generic_Male_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Male_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette17_Generic_Male_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette0_Generic_Female_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette0_Generic_Female_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette0_Generic_Female_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette0_Generic_Female_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette0_Generic_Female_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette0_Generic_Female_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette0_Generic_Female_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette0_Generic_Female_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette0_Generic_Female_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette0/Generic_Female_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette0_Generic_Female_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette1_Generic_Female_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette1_Generic_Female_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette1_Generic_Female_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette1_Generic_Female_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette1_Generic_Female_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette1_Generic_Female_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette1_Generic_Female_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette1_Generic_Female_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette1_Generic_Female_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette1/Generic_Female_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette1_Generic_Female_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette15_Generic_Female_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette15_Generic_Female_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette15_Generic_Female_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette15_Generic_Female_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette15_Generic_Female_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette15_Generic_Female_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette15_Generic_Female_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette15_Generic_Female_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette15_Generic_Female_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette15/Generic_Female_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette15_Generic_Female_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette16_Generic_Female_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette16_Generic_Female_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette16_Generic_Female_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette16_Generic_Female_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette16_Generic_Female_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette16_Generic_Female_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette16_Generic_Female_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette16_Generic_Female_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette16_Generic_Female_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette16/Generic_Female_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette16_Generic_Female_Captain_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette17_Generic_Female_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette17_Generic_Female_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette17_Generic_Female_Berserker_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Berserker_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Berserker_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Berserker_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Berserker_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette17_Generic_Female_Berserker_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette17_Generic_Female_Witch_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Witch_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Witch_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Witch_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Witch_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette17_Generic_Female_Witch_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette17_Generic_Female_Scout_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Scout_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Scout_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Scout_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Scout_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette17_Generic_Female_Scout_explosion_animated.gif" /></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="allies/palette17_Generic_Female_Captain_Large_animated.gif" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Captain_Large_face0_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Captain_Large_face1_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Captain_Large_face2_0.png" /></div>
+<div class="isotile"><img src="allies/palette17/Generic_Female_Captain_Large_face3_0.png" /></div>
+<div class="tritile"><img src="allies/palette17_Generic_Female_Captain_explosion_animated.gif" /></div>
+</div>
+</div>
+</body>
+</html>
+

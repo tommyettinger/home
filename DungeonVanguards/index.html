@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Dungeon Vanguards: Early Design Stuff</title>
+<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" media="screen" />
+</head>
+<body>
+<div class="center-column">
+<p>
+<br />Dungeon Vanguards is that tabletop RPG with 200 classes where you go into a dungeon and stuff.
+<br />This is a workspace for resolving some of the game mechanics problems.
+<br />
+<br />Characters have 4 stats (Toughness, Agility, Persona, Expertise), some Aptitudes (possibly including Blades, Bows, Heavy Armor, Fancy Clothes, etc.), several Skills (possibly including Healing Magic, Counterattack, Defile, and/or Wild Morph), and some equipment.
+<br />Stats, Aptitudes, and Skills all are represented with a type of die, from d4 to d12. When taking most kinds of action, you roll a Major die based on a Stat, and a Minor die based on the Rank of the item you're using (with a maximum die size determined by your Aptitude in that item) or your Skill Rank.
+<br />Many circumstances cause a character to have slightly better or worse chances of success with an action. Here, this is represented with Favor and Disfavor.
+<br />Favor lets you roll a die twice and pick which result you want, and Disfavor forces you to roll a die twice and use the lower result. These can be Major Favor/Disfavor (affecting your Major die, normally what determines the success or failure of your action) or Minor Favor/Disfavor (affecting your Minor die, normally what determines how well a successful action does).
+<br />Minor Favor and Minor Disfavor cancel each other out if they apply to the same roll; the same is true for Major Favor and Major Disfavor.
+<br />As an example, Fencer Betty is attacking Juggernaut Ted. Betty wields an excellent magical Saber (Rank d12), and Ted wears Heavy Armor (Rank d8).
+<br />Betty is still not an experienced adventurer, so her Aptitude in Sabers is only d8 (representing good training with that kind of item, but not truly heroic levels yet).  Likewise, Ted has a d8 Aptitude in Heavy Armor.
+<br />Betty rolls her Agility die (a d8) to try to hit Ted.  She gets a 5, and consults the Attacking table to see what that means -- she hits, and Ted has Minor Disfavor on his Defense roll. She hands Ted's player a Minor Disfavor marker. Now she rolls her Minor die to see how much damage she did.
+<br />Betty now rolls the lower of her Saber Aptitude and her Saber's Rank for her Minor die.  Even though her Saber has a d12 Rank, her lower d8 Aptitude takes precedence and she rolls a d8, getting a 6. Glancing at the Saber's Minor effects, she does 4 damage plus double her die result, for a total of 16 damage.
+<br />Ted decides to Defend to take as little damage as he can. He rolls his Toughness die (a d8), gets a 3, and consults the Defense table to see what that means -- he suffers a crit, meaning he takes the damage from Betty's attack and an extra d12 damage on top of that.
+<br />Ted tosses his Minor Disfavor marker back in the pile, and begrudgingly rolls his Minor die twice, taking the lower result.  His Aptitude and item Rank are the same for his Heavy Armor (d8), so he rolls a d8 twice and gets a 7 and a 2. He must keep the lower due to Disfavor, so he glances at the Heavy Armor's Minor effects for a result of 2.
+<br />Ted reduces the damage he takes by 4 plus his die result (4 + 2 = 6), meaning he takes 16 - 6 = 10 damage... before the crit.  He rolls an extra d12, gets 10, and takes another 10 damage. 20 damage is a lot for him, but he's not down yet...
+</p>
+<table class="major-table">
+<tr><th>Major</th><th>Attack table</th><th>Roll Minor?</th></tr>
+<tr><td>1</td><td>You miss and your target has Major Favor on his next roll.</td><td>No</td></tr>
+<tr><td>2</td><td>You miss and your target has Minor Favor on his next roll.</td><td>No</td></tr>
+<tr><td>3</td><td>You miss.</td><td>No</td></tr>
+<tr><td>4</td><td>You hit.</td><td>Attack</td></tr>
+<tr><td>5</td><td>You hit and your target has Minor Disfavor on his Defense roll.</td><td>Attack</td></tr>
+<tr><td>6</td><td>You hit and your target has Major Disfavor on his Defense roll.</td><td>Attack</td></tr>
+<tr><td>7</td><td>You hit and perform a Maneuver on the same target.</td><td>Attack</td></tr>
+<tr><td>8</td><td>You hit and perform a Maneuver on the same target with Minor Favor on the Maneuver roll.</td><td>Attack</td></tr>
+<tr><td>9</td><td>You hit and perform a Maneuver on the same target with Major Favor on the Maneuver roll.</td><td>Attack</td></tr>
+<tr><td>10</td><td>You crit.</td><td>Attack</td></tr>
+<tr><td>11</td><td>You crit and your target has Minor Disfavor on his Defense roll.</td><td>Attack</td></tr>
+<tr><td>12</td><td>You crit and your target has Major Disfavor on his Defense roll.</td><td>Attack</td></tr>
+</table>
+<table class="major-table">
+<tr><th>Major</th><th>Defense table</th><th>Roll Minor?</th></tr>
+<tr><td>1</td><td>You suffer a crit and your attacker has Major Favor on his next roll.</td><td>Defense</td></tr>
+<tr><td>2</td><td>You suffer a crit and your attacker has Minor Favor on his next roll.</td><td>Defense</td></tr>
+<tr><td>3</td><td>You suffer a crit.</td><td>Defense</td></tr>
+<tr><td>4</td><td>You take normal damage.</td><td>Defense</td></tr>
+<tr><td>5</td><td>You take normal damage and your attacker has Minor Disfavor on his next roll.</td><td>Defense</td></tr>
+<tr><td>6</td><td>You take normal damage and your attacker has Major Disfavor on his next roll.</td><td>Defense</td></tr>
+<tr><td>7</td><td>You take half damage.</td><td>Defense</td></tr>
+<tr><td>8</td><td>You take half damage and your attacker has Minor Disfavor on his next roll.</td><td>Defense</td></tr>
+<tr><td>9</td><td>You take half damage and your attacker has Major Disfavor on his next roll.</td><td>Defense</td></tr>
+<tr><td>10</td><td>You negate all damage.</td><td>Defense Or No</td></tr>
+<tr><td>11</td><td>You negate all damage and your attacker has Minor Disfavor on his next roll.</td><td>Defense Or No</td></tr>
+<tr><td>12</td><td>You negate all damage and your attacker has Major Disfavor on his next roll.</td><td>Defense Or No</td></tr>
+</table>
+<table class="minor-table">
+<tr><th>Minor</th><th>Attack table</th></tr>
+<tr><td>Knife</td><td>Deal 6 damage plus your die result. Your target has Major Disfavor on his Defense roll.</td></tr>
+<tr><td>Saber</td><td>Deal 4 damage, or 8 if this damage is dealt by a Counterattack, plus double your die result.</td></tr>
+<tr><td>Axe</td><td>Deal 8 damage, or 12 if your target is unarmored, plus your die result.</td></tr>
+<tr><td>Bow</td><td>Deal 2 damage plus triple your die result.</td></tr>
+<tr><td>Gun</td><td>Deal 2 damage plus double your die result. Ignore damage reduction from the target's armor.</td></tr>
+<tr><td>Blade</td><td>Deal 10 damage plus your die result.</td></tr>
+<tr><td>Spear</td><td>Deal 6 damage, or 14 if this damage is dealt by a Counterattack, plus your die result.</td></tr>
+<tr><td>Bludgeon</td><td>Deal 7 damage, or 13 if your target is armored, plus your die result.</td></tr>
+<tr><td>Thrown</td><td>Deal 8 damage plus your die result. Your target has Minor Disfavor on his Defense roll.</td></tr>
+<tr><td>Whip</td><td>Deal 2 damage, or 10 if your target is unarmored, plus double your die result.</td></tr>
+<tr><td>Bomb</td><td>Deal 4 damage, or 8 if your target is armored, plus double your die result.</td></tr>
+<tr><td>Arcane</td><td>Deal 6 damage. Ignore damage reduction from the target's armor. Gain Mana equal to your die result.</td></tr>
+</table>
+<table class="minor-table">
+<tr><th>Minor</th><th>Defense table</th></tr>
+<tr><td>Light Armor</td><td>Reduce damage by your die result.</td></tr>
+<tr><td>Medium Armor</td><td>Reduce damage by 2 plus your die result. Your attacker has Minor Favor on his next roll against you.</td></tr>
+<tr><td>Heavy Armor</td><td>Reduce damage by 4 plus your die result. Your attacker has Major Favor on his next roll against you.</td></tr>
+<tr><td>Robes</td><td>Gain Mana equal to your die result.</td></tr>
+<tr><td>Fancy Clothes</td><td>Gain a Courage die of the same type as this die.</td></tr>
+<tr><td>Stealth Garb</td><td>Gain a Survival die of the same type as this die.</td></tr>
+<tr><td>Gi</td><td>Reduce damage by 4 plus your die result if you are attempting a Counterattack.</td></tr>
+</table>
+
+</div>
+</body></html>

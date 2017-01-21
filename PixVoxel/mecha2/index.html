@@ -1,0 +1,195 @@
+
+<html>
+<head>
+<title>Giant Fighting Robots graphics demo</title>
+<style type="text/css">
+img {border:none; padding: 0px; margin-top: 16px;padding-right: 40px; outline: none;}
+.big img {border:none; padding: 0px; margin-top: 48px;margin-right: 128px;margin-left: -40px; outline: none;}
+.massive img {border:none; padding: 0px; margin-top: -40px;margin-right: 88px;margin-left: -120px; outline: none;}
+
+body {
+	background-image: url(tiling_flat.png);
+	background-position: -40px 0px;
+	margin: 0;
+}
+td, tr { padding: 0px; margin: 0px; height: 128px;border: none; }
+table { border-collapse: collapse; display: inline; margin: 0px 0px 0px 124px;}
+.blackout {background: #333; width: 60%; margin:auto;}
+p {color: #fff; background: #333; font-family: 'Arial';}
+a {color: #f40; background: #333; font-family: 'Arial';}
+p, a {color: #fff; font-family: "Arial"; font-weight: bold; background-color: #444; text-align: center; }
+.gap
+{
+	margin-bottom: 0px;
+	font-size: 20px;
+	margin-left: -100px;
+	min-height: 0px;
+	max-height: 0px;
+	width: 100px;
+	position: relative;
+	overflow:visible;
+	display: inline-block;
+}
+.grid
+{
+	padding: 100px;
+}
+.row
+{
+	min-height: 192px;
+	max-height: 192px;
+	width: 100%;
+	position: relative;
+	font-size: 0px;
+	overflow:visible;
+}
+.bigrow
+{
+	min-height: 192px;
+	max-height: 192px;
+	width: 100%;
+	position: relative;
+	font-size: 0px;
+	overflow:visible;
+}
+.big
+{
+	margin-left: 10px;
+}
+.isotile
+{
+	position: relative;
+	display: inline-block;
+	width: 64px;
+	height: 128px;
+	margin-top: -48px;
+	top: -48px;
+}
+.bigtile
+{
+	position: relative;
+	display: inline-block;
+	width: 128px;
+	height: 128px;
+	margin-top: -112px;
+	top: -112px;
+}
+.tritile
+{
+	position: relative;
+	display: inline-block;
+	width: 128px;
+	height: 128px;
+	left: -8px;
+	margin-top: -128px;
+	top: -8px;
+}
+.massive
+{
+	position: relative;
+	display: inline-block;
+	width: 256px;
+	height: 128px;
+	margin-left: 128px;
+	margin-top: -88px;
+	top: -16px;
+}
+.bigtile:nth-of-type(2n-1)
+{
+	top: -48px;
+}
+.isotile:nth-of-type(2n-1)
+{
+	top: -16px;
+}
+</style>
+<!-- 
+.row:nth-of-type(2n-1) .tritile
+{
+	margin-left: 128px;
+}
+
+.row:nth-of-type(2n-1)
+{
+	margin-left: 64px;
+}
+-->
+</head>
+<body>
+<section class="grid">
+<div class="row" >
+<div class="isotile"><img src="units/palette0_Maku_Large_animated.gif"                  /></div>
+<div class="isotile"><img src="units/palette0_Maku_Firing_Left_Large_animated.gif"      /></div>
+<div class="tritile"><img src="units/palette0_Maku_explosion_animated.gif"              /></div>
+<div class="tritile"><img src="units/palette0_Maku_Firing_Left_Beam_Huge_animated.gif"  /></div>
+<div class="tritile"><img src="units/palette0_Maku_Firing_Left_Lightning_Huge_animated.gif"  /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="units/palette0_Banzai_Large_animated.gif"                  /></div>
+<div class="isotile"><img src="units/palette0_Banzai_Firing_Both_Large_animated.gif"      /></div>
+<div class="isotile"><img src="units/palette0_Banzai_Firing_Left_Large_animated.gif"      /></div>
+<div class="isotile"><img src="units/palette0_Banzai_Firing_Right_Large_animated.gif"     /></div>
+<div class="tritile"><img src="units/palette0_Banzai_explosion_animated.gif"              /></div>
+<div class="tritile"><img src="units/palette0_Banzai_Firing_Both_Autofire_Autofire_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Banzai_Firing_Left_Autofire_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Banzai_Firing_Right_Autofire_Huge_animated.gif"/></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="units/palette0_Banzai_Flying_Large_animated.gif"                  /></div>
+<div class="isotile"><img src="units/palette0_Banzai_Flying_Firing_Both_Large_animated.gif"      /></div>
+<div class="isotile"><img src="units/palette0_Banzai_Flying_Firing_Left_Large_animated.gif"      /></div>
+<div class="isotile"><img src="units/palette0_Banzai_Flying_Firing_Right_Large_animated.gif"     /></div>
+<div class="tritile"><img src="units/palette0_Banzai_Flying_explosion_animated.gif"              /></div>
+<div class="tritile"><img src="units/palette0_Banzai_Flying_Firing_Both_Autofire_Autofire_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Banzai_Flying_Firing_Left_Autofire_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Banzai_Flying_Firing_Right_Autofire_Huge_animated.gif"/></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="units/palette0_Deadman_Large_animated.gif"                  /></div>
+<div class="isotile"><img src="units/palette0_Deadman_Firing_Both_Large_animated.gif"      /></div>
+<div class="isotile"><img src="units/palette0_Deadman_Firing_Left_Large_animated.gif"      /></div>
+<div class="isotile"><img src="units/palette0_Deadman_Firing_Right_Large_animated.gif"     /></div>
+<div class="tritile"><img src="units/palette0_Deadman_explosion_animated.gif"              /></div>
+<div class="tritile"><img src="units/palette0_Deadman_Firing_Left_Autofire_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Deadman_Firing_Left_Lightning_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Deadman_Firing_Right_Swing_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Deadman_Firing_Both_Autofire_Swing_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Deadman_Firing_Both_Lightning_Swing_Huge_animated.gif"/></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="units/palette0_Chivalry_Large_animated.gif"                   /></div>
+<div class="isotile"><img src="units/palette0_Chivalry_Firing_Right_Large_animated.gif"      /></div>
+<div class="tritile"><img src="units/palette0_Chivalry_explosion_animated.gif"               /></div>
+<div class="tritile"><img src="units/palette0_Chivalry_Firing_Right_Swing_Huge_animated.gif" /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="units/palette0_Mark_Zero_Large_animated.gif"                  /></div>
+<div class="isotile"><img src="units/palette0_Mark_Zero_Firing_Both_Large_animated.gif"      /></div>
+<div class="tritile"><img src="units/palette0_Mark_Zero_explosion_animated.gif"              /></div>
+<div class="tritile"><img src="units/palette0_Mark_Zero_Firing_Both_Beam_Huge_animated.gif"  /></div>
+<div class="tritile"><img src="units/palette0_Mark_Zero_Firing_Both_Lightning_Huge_animated.gif"  /></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="units/palette0_Vox_Populi_Large_animated.gif"                  /></div>
+<div class="isotile"><img src="units/palette0_Vox_Populi_Firing_Both_Large_animated.gif"      /></div>
+<div class="isotile"><img src="units/palette0_Vox_Populi_Firing_Left_Large_animated.gif"      /></div>
+<div class="isotile"><img src="units/palette0_Vox_Populi_Firing_Right_Large_animated.gif"     /></div>
+<div class="tritile"><img src="units/palette0_Vox_Populi_explosion_animated.gif"              /></div>
+<div class="tritile"><img src="units/palette0_Vox_Populi_Firing_Both_Autofire_Beam_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Vox_Populi_Firing_Left_Autofire_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Vox_Populi_Firing_Right_Beam_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Vox_Populi_Firing_Both_Cannon_Lightning_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Vox_Populi_Firing_Left_Cannon_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Vox_Populi_Firing_Right_Lightning_Huge_animated.gif"/></div>
+</div>
+<div class="row" >
+<div class="isotile"><img src="units/palette0_Vox_Nihilus_Large_animated.gif"                  /></div>
+<div class="isotile"><img src="units/palette0_Vox_Nihilus_Firing_Both_Large_animated.gif"      /></div>
+<div class="tritile"><img src="units/palette0_Vox_Nihilus_explosion_animated.gif"              /></div>
+<div class="tritile"><img src="units/palette0_Vox_Nihilus_Firing_Both_Cannon_Huge_animated.gif"/></div>
+<div class="tritile"><img src="units/palette0_Vox_Nihilus_Firing_Both_Lightning_Huge_animated.gif"/></div>
+</div>
+</section>
+</body>
+</html>
+

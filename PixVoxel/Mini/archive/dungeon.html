@@ -1,0 +1,3542 @@
+
+<html>
+<head>
+<title>PixVoxel Demo</title>
+<style type="text/css">
+.mask img {border:none; outline: none;}
+img {border:none; padding: 0px; margin-top: 20px;padding-right: 28px; outline: none;}
+.big img {border:none; padding: 0px; margin-top: 36px;margin-right: 96px;margin-left: -24px; outline: none;}
+
+body {
+	background-color: black;
+	background-position: 0px 0px;
+	margin: 0;
+	white-space: nowrap;
+}
+td, tr { padding: 0px; margin: 0px; height: 128px;border: none; }
+table { border-collapse: collapse; display: inline; margin: 0px 0px 0px 84px;}
+.blackout {background: #333; width: 60%; margin:auto;}
+p {color: #fff; background: #333; font-family: 'Arial';}
+a {color: #f40; background: #333; font-family: 'Arial';}
+p, a {color: #fff; font-family: "Arial"; font-weight: bold; background-color: #444; text-align: center; }
+.gap
+{
+	margin-bottom: 0px;
+	font-size: 20px;
+	margin-left: -96px;
+	min-height: 0px;
+	max-height: 0px;
+	width: 100px;
+	position: relative;
+	overflow:visible;
+	display: inline-block;
+}
+.grid
+{
+	padding-top: 102px;
+	padding-bottom: 0;
+	padding-left: 108px;
+	padding-right: 0;
+}
+.row
+{
+	min-height: 16px;
+	max-height: 16px;
+	position: relative;
+	font-size: 0px;
+	overflow:visible;
+}
+.maskrow
+{
+	min-height: 128px;
+	max-height: 128px;
+	position: relative;
+	font-size: 0px;
+	overflow:visible;
+}
+.floor
+{
+	position: absolute;
+	font-size: 0px;
+	overflow:visible;
+}
+.big
+{
+	margin-left: 14px;
+}
+
+.isotile
+{
+	position: relative;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	margin-left: -16px;
+	margin-top: 0px;
+}
+.bigtile
+{
+	position: relative;
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	margin-top: -40px;
+	top: -40px;
+}
+.masktile
+{
+	position: relative;
+	display: inline-block;
+	width: 512px;
+	height: 256px;
+	margin-right: 0px;
+	padding-top: -2px;
+	margin-bottom: 0px;
+}
+.row:nth-of-type(2n-1)
+{
+	margin-left: 32px;
+}
+.maskrow:nth-of-type(2n-1)
+{
+	margin-left: 256px;
+}
+</style>
+</head>
+<body>
+<div class="grid">
+<div class="floor">
+<div class="maskrow">
+<div class="masktile"></div>
+<div class="masktile"></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"></div>
+<div class="masktile"></div>
+</div>
+<div class="maskrow">
+<div class="masktile"></div>
+<div class="masktile"></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"></div>
+<div class="masktile"></div>
+</div>
+<div class="maskrow">
+<div class="masktile"></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"></div>
+</div>
+<div class="maskrow">
+<div class="masktile"></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"></div>
+</div>
+<div class="maskrow">
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+</div>
+<div class="maskrow">
+<div class="masktile"></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"></div>
+</div>
+<div class="maskrow">
+<div class="masktile"></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"></div>
+</div>
+<div class="maskrow">
+<div class="masktile"></div>
+<div class="masktile"></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"></div>
+<div class="masktile"></div>
+</div>
+<div class="maskrow">
+<div class="masktile"></div>
+<div class="masktile"></div>
+<div class="masktile"><img src="dungeon/palette4(0)_Water_Mask_face0_0.png" /></div>
+<div class="masktile"></div>
+<div class="masktile"></div>
+</div>
+</div>
+<div class="floor">
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Door_Closed_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Door_Closed_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Door_Closed_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Door_Closed_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_0.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_3.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_2.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Door_Closed_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_2.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face0_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_3.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face1_1.png" />--></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face2_1.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><!--<img src="dungeon/palette4(0)_Water_face3_0.png" />--></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Door_Closed_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Tee_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Cross_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face0_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face2_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face2_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face3_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Floor_face3_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face1_0.png" /></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Straight_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"><img src="dungeon/palette4(0)_Wall_Corner_face0_0.png" /></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+<div class="row">
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+<div class="isotile"></div>
+</div>
+</div>
+</div>
+</body>
+</html>
+

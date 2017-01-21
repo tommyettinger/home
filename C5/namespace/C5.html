@@ -1,0 +1,1543 @@
+
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>C5 - C5</title>
+        <meta name="viewport" content="width=device-width">
+
+					<link rel="stylesheet" type="text/css" href="../assets/css/font.css?version=0.9.6.8" />
+			<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css?version=0.9.6.8" />
+			<link rel="stylesheet" type="text/css" href="../assets/css/style.css?version=0.9.6.8" />
+			
+			<!--[if IE 8]>
+				<script src="../assets/js/vendor.ie8.js?version=0.9.6.8"></script>
+			<![endif]-->
+			<![if !IE 8]>
+				<script src="../assets/js/vendor.js?version=0.9.6.8"></script>
+			<![endif]>
+
+			<script src="../assets/js/jquery.layout.min.js"></script>	
+			<script src="../assets/js/frame.js?version=0.9.6.8"></script>
+			<script src="../assets/js/iframe.js"></script>
+		
+		<script>hljs.initHighlightingOnLoad();</script>
+
+    </head>
+    <body>        
+       
+	    <div id="dropdown-1" class="dropdown dropdown-tip">
+			<ul class="dropdown-menu">
+									<li><a href="../type/ArrayBase.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ArrayBase</a></li>
+
+									<li><a href="../type/ArrayList.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ArrayList</a></li>
+
+									<li><a href="../type/C5Random.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> C5Random</a></li>
+
+									<li><a href="../type/CircularQueue.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> CircularQueue</a></li>
+
+									<li><a href="../type/ClearedEventArgs.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ClearedEventArgs</a></li>
+
+									<li><a href="../type/ClearedRangeEventArgs.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ClearedRangeEventArgs</a></li>
+
+									<li><a href="../type/CollectionBase.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> CollectionBase</a></li>
+
+									<li><a href="../type/CollectionModifiedException.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> CollectionModifiedException</a></li>
+
+									<li><a href="../type/CollectionValueBase.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> CollectionValueBase</a></li>
+
+									<li><a href="../type/ComparerFactory.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ComparerFactory</a></li>
+
+									<li><a href="../type/DictionaryBase.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> DictionaryBase</a></li>
+
+									<li><a href="../type/DirectedCollectionBase.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> DirectedCollectionBase</a></li>
+
+									<li><a href="../type/DirectedCollectionValueBase.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> DirectedCollectionValueBase</a></li>
+
+									<li><a href="../type/DuplicateNotAllowedException.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> DuplicateNotAllowedException</a></li>
+
+									<li><a href="../type/EnumerableBase.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> EnumerableBase</a></li>
+
+									<li><a href="../type/EnumerationDirection.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> EnumerationDirection</a></li>
+
+									<li><a href="../type/EqualityComparer.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> EqualityComparer</a></li>
+
+									<li><a href="../type/EventTypeEnum.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> EventTypeEnum</a></li>
+
+									<li><a href="../type/FixedSizeCollectionException.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> FixedSizeCollectionException</a></li>
+
+									<li><a href="../type/GuardedCollection.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> GuardedCollection</a></li>
+
+									<li><a href="../type/GuardedCollectionValue.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> GuardedCollectionValue</a></li>
+
+									<li><a href="../type/GuardedDictionary.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> GuardedDictionary</a></li>
+
+									<li><a href="../type/GuardedDirectedCollectionValue.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> GuardedDirectedCollectionValue</a></li>
+
+									<li><a href="../type/GuardedDirectedEnumerable.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> GuardedDirectedEnumerable</a></li>
+
+									<li><a href="../type/GuardedEnumerable.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> GuardedEnumerable</a></li>
+
+									<li><a href="../type/GuardedEnumerator.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> GuardedEnumerator</a></li>
+
+									<li><a href="../type/GuardedIndexedSorted.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> GuardedIndexedSorted</a></li>
+
+									<li><a href="../type/GuardedList.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> GuardedList</a></li>
+
+									<li><a href="../type/GuardedQueue.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> GuardedQueue</a></li>
+
+									<li><a href="../type/GuardedSequenced.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> GuardedSequenced</a></li>
+
+									<li><a href="../type/GuardedSorted.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> GuardedSorted</a></li>
+
+									<li><a href="../type/GuardedSortedDictionary.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> GuardedSortedDictionary</a></li>
+
+									<li><a href="../type/HashBag.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> HashBag</a></li>
+
+									<li><a href="../type/HashDictionary.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> HashDictionary</a></li>
+
+									<li><a href="../type/HashedArrayList.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> HashedArrayList</a></li>
+
+									<li><a href="../type/HashedLinkedList.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> HashedLinkedList</a></li>
+
+									<li><a href="../type/HashSet.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> HashSet</a></li>
+
+									<li><a href="../type/ICollection.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ICollection</a></li>
+
+									<li><a href="../type/ICollectionValue.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ICollectionValue</a></li>
+
+									<li><a href="../type/IDictionary.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IDictionary</a></li>
+
+									<li><a href="../type/IDirectedCollectionValue.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IDirectedCollectionValue</a></li>
+
+									<li><a href="../type/IDirectedEnumerable.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IDirectedEnumerable</a></li>
+
+									<li><a href="../type/IExtensible.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IExtensible</a></li>
+
+									<li><a href="../type/IIndexed.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IIndexed</a></li>
+
+									<li><a href="../type/IIndexedSorted.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IIndexedSorted</a></li>
+
+									<li><a href="../type/IList.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IList</a></li>
+
+									<li><a href="../type/IncompatibleViewException.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IncompatibleViewException</a></li>
+
+									<li><a href="../type/IntervalHeap.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IntervalHeap</a></li>
+
+									<li><a href="../type/InvalidPriorityQueueHandleException.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> InvalidPriorityQueueHandleException</a></li>
+
+									<li><a href="../type/IPersistentSorted.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IPersistentSorted</a></li>
+
+									<li><a href="../type/IPriorityQueue.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IPriorityQueue</a></li>
+
+									<li><a href="../type/IPriorityQueueHandle.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IPriorityQueueHandle</a></li>
+
+									<li><a href="../type/IQueue.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IQueue</a></li>
+
+									<li><a href="../type/ISequenced.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ISequenced</a></li>
+
+									<li><a href="../type/IShowable.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IShowable</a></li>
+
+									<li><a href="../type/ISorted.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ISorted</a></li>
+
+									<li><a href="../type/ISortedDictionary.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ISortedDictionary</a></li>
+
+									<li><a href="../type/IStack.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> IStack</a></li>
+
+									<li><a href="../type/ItemAtEventArgs.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ItemAtEventArgs</a></li>
+
+									<li><a href="../type/ItemCountEventArgs.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ItemCountEventArgs</a></li>
+
+									<li><a href="../type/KeyValuePair2.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> KeyValuePair</a></li>
+
+									<li><a href="../type/KeyValuePairComparer.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> KeyValuePairComparer</a></li>
+
+									<li><a href="../type/KeyValuePairEqualityComparer.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> KeyValuePairEqualityComparer</a></li>
+
+									<li><a href="../type/LinkedList.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> LinkedList</a></li>
+
+									<li><a href="../type/Logger.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> Logger</a></li>
+
+									<li><a href="../type/NoSuchItemException.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> NoSuchItemException</a></li>
+
+									<li><a href="../type/NotAViewException.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> NotAViewException</a></li>
+
+									<li><a href="../type/NotComparableException.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> NotComparableException</a></li>
+
+									<li><a href="../type/ReadOnlyCollectionException.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ReadOnlyCollectionException</a></li>
+
+									<li><a href="../type/Rec3.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> Rec</a></li>
+
+									<li><a href="../type/Rec2.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> Rec</a></li>
+
+									<li><a href="../type/Rec.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> Rec</a></li>
+
+									<li><a href="../type/SequencedBase.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> SequencedBase</a></li>
+
+									<li><a href="../type/SequencedCollectionEqualityComparer.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> SequencedCollectionEqualityComparer</a></li>
+
+									<li><a href="../type/Showing.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> Showing</a></li>
+
+									<li><a href="../type/SortedArray.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> SortedArray</a></li>
+
+									<li><a href="../type/SortedDictionaryBase.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> SortedDictionaryBase</a></li>
+
+									<li><a href="../type/Sorting.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> Sorting</a></li>
+
+									<li><a href="../type/Speed.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> Speed</a></li>
+
+									<li><a href="../type/TreeBag.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> TreeBag</a></li>
+
+									<li><a href="../type/TreeDictionary.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> TreeDictionary</a></li>
+
+									<li><a href="../type/TreeSet.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> TreeSet</a></li>
+
+									<li><a href="../type/UnlistenableEventException.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> UnlistenableEventException</a></li>
+
+									<li><a href="../type/UnsequencedCollectionEqualityComparer.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> UnsequencedCollectionEqualityComparer</a></li>
+
+									<li><a href="../type/ViewDisposedException.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> ViewDisposedException</a></li>
+
+									<li><a href="../type/WrappedArray.html"><img alt="Class-Icon" src="../assets/images/icons/class_public.png"> WrappedArray</a></li>
+
+							</ul>
+		</div>
+	   
+	    <div class="ui-layout-north">
+			<div class="toolbar">
+				<a href="#" data-dropdown="#dropdown-1" class="button"><img src="../assets/images/icons/class_public.png"/> Types <span class="info">(86)</span> <i class="icon-caret-down"></i></a>
+				<div class="right">
+					<span class="toolbar-info"> Assembly: C5</span>
+					<a href="#" id="print-button" class="button" title="print"><i class="icon-print"></i></a>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+        
+		<div class="ui-layout-center">
+			<div>
+				
+					<h3 class="box-title first-heading">Types</h3>
+
+				
+				<div class="table-box">
+					<table>
+						<thead>
+							<tr>
+								<td></td>
+								<td>Name</td>
+								<td>Description</td>
+							</tr>
+						</thead>
+						<tbody>			
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ArrayBase" href="../type/ArrayBase.html">ArrayBase</a>
+									</td>	
+									<td class="markdown">
+																						<p>Base class for collection classes of dynamic array type implementations.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ArrayList" href="../type/ArrayList.html">ArrayList</a>
+									</td>	
+									<td class="markdown">
+																						<p>A list collection based on a plain dynamic array data structure.
+Expansion of the internal array is performed by doubling on demand. 
+The internal array is only shrinked by the Clear method. </p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="C5Random" href="../type/C5Random.html">C5Random</a>
+									</td>	
+									<td class="markdown">
+																						<p>A modern random number generator based on G. Marsaglia: 
+Seeds for Random Number Generators, Communications of the
+ACM 46, 5 (May 2003) 90-93; and a posting by Marsaglia to 
+comp.lang.c on 2003-04-03.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="CircularQueue" href="../type/CircularQueue.html">CircularQueue</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ClearedEventArgs" href="../type/ClearedEventArgs.html">ClearedEventArgs</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ClearedRangeEventArgs" href="../type/ClearedRangeEventArgs.html">ClearedRangeEventArgs</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="CollectionBase" href="../type/CollectionBase.html">CollectionBase</a>
+									</td>	
+									<td class="markdown">
+																						<p>Base class (abstract) for ICollection implementations.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="CollectionModifiedException" href="../type/CollectionModifiedException.html">CollectionModifiedException</a>
+									</td>	
+									<td class="markdown">
+																						<p>An exception thrown by enumerators, range views etc. when accessed after 
+the underlying collection has been modified.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="CollectionValueBase" href="../type/CollectionValueBase.html">CollectionValueBase</a>
+									</td>	
+									<td class="markdown">
+																						<p>Base class for classes implementing ICollectionValue[T]</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ComparerFactory" href="../type/ComparerFactory.html">ComparerFactory</a>
+									</td>	
+									<td class="markdown">
+																						<p>Factory class to create comparers and equality comparers using Func delegates</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="DictionaryBase" href="../type/DictionaryBase.html">DictionaryBase</a>
+									</td>	
+									<td class="markdown">
+																						<p>A base class for implementing a dictionary based on a set collection implementation.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="DirectedCollectionBase" href="../type/DirectedCollectionBase.html">DirectedCollectionBase</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="DirectedCollectionValueBase" href="../type/DirectedCollectionValueBase.html">DirectedCollectionValueBase</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="DuplicateNotAllowedException" href="../type/DuplicateNotAllowedException.html">DuplicateNotAllowedException</a>
+									</td>	
+									<td class="markdown">
+																						<p>An exception thrown when an operation attempts to create a duplicate in a collection with set semantics 
+(AllowsDuplicates is false) or attempts to create a duplicate key in a dictionary.</p>
+
+<p>With collections this can only happen with Insert operations on lists, since the Add operations will
+not try to create duplictes and either ignore the failure or report it in a bool return value.</p>
+
+<p>With dictionaries this can happen with the  metod.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="EnumerableBase" href="../type/EnumerableBase.html">EnumerableBase</a>
+									</td>	
+									<td class="markdown">
+																						<p>A base class for implementing an IEnumerable<T></p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="EnumerationDirection" href="../type/EnumerationDirection.html">EnumerationDirection</a>
+									</td>	
+									<td class="markdown">
+																						<p>Direction of enumeration order relative to original collection.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="EqualityComparer" href="../type/EqualityComparer.html">EqualityComparer</a>
+									</td>	
+									<td class="markdown">
+																						<p>Utility class for building default generic equality comparers.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="EventTypeEnum" href="../type/EventTypeEnum.html">EventTypeEnum</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="FixedSizeCollectionException" href="../type/FixedSizeCollectionException.html">FixedSizeCollectionException</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="GuardedCollection" href="../type/GuardedCollection.html">GuardedCollection</a>
+									</td>	
+									<td class="markdown">
+																						<p>A read-only wrapper for an ICollection,</p>
+
+<p>Suitable for wrapping hash tables, 
+and </p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="GuardedCollectionValue" href="../type/GuardedCollectionValue.html">GuardedCollectionValue</a>
+									</td>	
+									<td class="markdown">
+																						<p>A read-only wrapper for an ICollectionValue<T></p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="GuardedDictionary" href="../type/GuardedDictionary.html">GuardedDictionary</a>
+									</td>	
+									<td class="markdown">
+																						<p>A read-only wrapper for a dictionary.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="GuardedDirectedCollectionValue" href="../type/GuardedDirectedCollectionValue.html">GuardedDirectedCollectionValue</a>
+									</td>	
+									<td class="markdown">
+																						<p>A read-only wrapper for a directed collection</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="GuardedDirectedEnumerable" href="../type/GuardedDirectedEnumerable.html">GuardedDirectedEnumerable</a>
+									</td>	
+									<td class="markdown">
+																						<p>A read-only wrapper for a generic directed enumerable</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="GuardedEnumerable" href="../type/GuardedEnumerable.html">GuardedEnumerable</a>
+									</td>	
+									<td class="markdown">
+																						<p>A read-only wrapper class for a generic enumerable</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="GuardedEnumerator" href="../type/GuardedEnumerator.html">GuardedEnumerator</a>
+									</td>	
+									<td class="markdown">
+																						<p>A read-only wrapper class for a generic enumerator</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="GuardedIndexedSorted" href="../type/GuardedIndexedSorted.html">GuardedIndexedSorted</a>
+									</td>	
+									<td class="markdown">
+																						<p>Read-only wrapper for indexed sorted collections</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="GuardedList" href="../type/GuardedList.html">GuardedList</a>
+									</td>	
+									<td class="markdown">
+																						<p>A read-only wrapper for a generic list collection</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="GuardedQueue" href="../type/GuardedQueue.html">GuardedQueue</a>
+									</td>	
+									<td class="markdown">
+																						<p>A read-only wrapper for a generic indexable queue (allows indexing).</p>
+
+<p>Suitable for wrapping a </p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="GuardedSequenced" href="../type/GuardedSequenced.html">GuardedSequenced</a>
+									</td>	
+									<td class="markdown">
+																						<p>A read-only wrapper for a sequenced collection</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="GuardedSorted" href="../type/GuardedSorted.html">GuardedSorted</a>
+									</td>	
+									<td class="markdown">
+																						<p>A read-only wrapper for a sorted collection</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="GuardedSortedDictionary" href="../type/GuardedSortedDictionary.html">GuardedSortedDictionary</a>
+									</td>	
+									<td class="markdown">
+																						<p>A read-only wrapper for a sorted dictionary.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="HashBag" href="../type/HashBag.html">HashBag</a>
+									</td>	
+									<td class="markdown">
+																						<p>A bag collection based on a hash table of (item,count) pairs.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="HashDictionary" href="../type/HashDictionary.html">HashDictionary</a>
+									</td>	
+									<td class="markdown">
+																						<p>A generic dictionary class based on a hash set class HashSet.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="HashedArrayList" href="../type/HashedArrayList.html">HashedArrayList</a>
+									</td>	
+									<td class="markdown">
+																						<p>A list collection based on a plain dynamic array data structure.
+Expansion of the internal array is performed by doubling on demand. 
+The internal array is only shrinked by the Clear method. </p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="HashedLinkedList" href="../type/HashedLinkedList.html">HashedLinkedList</a>
+									</td>	
+									<td class="markdown">
+																						<p>A list collection class based on a doubly linked list data structure.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="HashSet" href="../type/HashSet.html">HashSet</a>
+									</td>	
+									<td class="markdown">
+																						<p>A set collection class based on linear hashing</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ICollection" href="../type/ICollection.html">ICollection</a>
+									</td>	
+									<td class="markdown">
+																						<p>The simplest interface of a main stream generic collection
+with lookup, insertion and removal operations.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ICollectionValue" href="../type/ICollectionValue.html">ICollectionValue</a>
+									</td>	
+									<td class="markdown">
+																						<p>A generic collection that may be enumerated and can answer
+efficiently how many items it contains. Like 
+IEnumerable<T>
+,
+this interface does not prescribe any operations to initialize or update the 
+collection. The main usage for this interface is to be the return type of 
+query operations on generic collection.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IDictionary" href="../type/IDictionary.html">IDictionary</a>
+									</td>	
+									<td class="markdown">
+																						<p>A dictionary with keys of type K and values of type V. Equivalent to a
+finite partial map from K to V.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IDirectedCollectionValue" href="../type/IDirectedCollectionValue.html">IDirectedCollectionValue</a>
+									</td>	
+									<td class="markdown">
+																						<p>A sized generic collection, that can be enumerated backwards.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IDirectedEnumerable" href="../type/IDirectedEnumerable.html">IDirectedEnumerable</a>
+									</td>	
+									<td class="markdown">
+																						<p>A generic collection, that can be enumerated backwards.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IExtensible" href="../type/IExtensible.html">IExtensible</a>
+									</td>	
+									<td class="markdown">
+																						<p>A generic collection to which one may add items. This is just the intersection
+of the main stream generic collection interfaces and the priority queue interface,
+ICollection and IPriorityQueue.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IIndexed" href="../type/IIndexed.html">IIndexed</a>
+									</td>	
+									<td class="markdown">
+																						<p>A sequenced collection, where indices of items in the order are maintained</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IIndexedSorted" href="../type/IIndexedSorted.html">IIndexedSorted</a>
+									</td>	
+									<td class="markdown">
+																						<p>A collection where items are maintained in sorted order together
+with their indexes in that order.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IList" href="../type/IList.html">IList</a>
+									</td>	
+									<td class="markdown">
+																						<p>This is an indexed collection, where the item order is chosen by 
+the user at insertion time.</p>
+
+<p>NBNBNB: we need a description of the view functionality here!</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IncompatibleViewException" href="../type/IncompatibleViewException.html">IncompatibleViewException</a>
+									</td>	
+									<td class="markdown">
+																						<p>An exception thrown by operations on a list that expects an argument
+that is a view on the same underlying list.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IntervalHeap" href="../type/IntervalHeap.html">IntervalHeap</a>
+									</td>	
+									<td class="markdown">
+																						<p>A priority queue class based on an interval heap data structure.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="InvalidPriorityQueueHandleException" href="../type/InvalidPriorityQueueHandleException.html">InvalidPriorityQueueHandleException</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IPersistentSorted" href="../type/IPersistentSorted.html">IPersistentSorted</a>
+									</td>	
+									<td class="markdown">
+																						<p>The type of a sorted collection with persistence</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IPriorityQueue" href="../type/IPriorityQueue.html">IPriorityQueue</a>
+									</td>	
+									<td class="markdown">
+																						<p>A generic collection of items prioritized by a comparison (order) relation.
+Supports adding items and reporting or removing extremal elements. </p>
+
+<p>When adding an item, the user may choose to have a handle allocated for this item in the queue. 
+The resulting handle may be used for deleting the item even if not extremal, and for replacing the item.
+A priority queue typically only holds numeric priorities associated with some objects
+maintained separately in other collection objects.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IPriorityQueueHandle" href="../type/IPriorityQueueHandle.html">IPriorityQueueHandle</a>
+									</td>	
+									<td class="markdown">
+																						<p>The base type of a priority queue handle</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IQueue" href="../type/IQueue.html">IQueue</a>
+									</td>	
+									<td class="markdown">
+																						<p>The interface describing the operations of a FIFO queue data structure.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ISequenced" href="../type/ISequenced.html">ISequenced</a>
+									</td>	
+									<td class="markdown">
+																						<p>An editable collection maintaining a definite sequence order of the items.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IShowable" href="../type/IShowable.html">IShowable</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ISorted" href="../type/ISorted.html">ISorted</a>
+									</td>	
+									<td class="markdown">
+																						<p>A sorted collection, i.e. a collection where items are maintained and can be searched for in sorted order.
+Thus the sequence order is given as a sorting order.</p>
+
+<p>The sorting order is defined by a comparer, an object of type IComparer<T> 
+(). Implementors of this interface will normally let the user 
+define the comparer as an argument to a constructor. 
+Usually there will also be constructors without a comparer argument, in which case the 
+comparer should be the defalt comparer for the item type, .</p>
+
+<p>The comparer of the sorted collection is available as the SCG.Comparer property 
+().</p>
+
+<p>The methods are grouped according to
+Extrema: report or report and delete an extremal item. This is reminiscent of simplified priority queues.
+Nearest neighbor: report predecessor or successor in the collection of an item. Cut belongs to this group.
+Range: report a view of a range of elements or remove all elements in a range.
+AddSorted: add a collection of items known to be sorted in the same order (should be faster) (to be removed?)</p>
+
+<p>Since this interface extends ISequenced<T>, sorted collections will also have an 
+item equalityComparer (). This equalityComparer will not be used in connection with 
+the inner workings of the sorted collection, but will be used if the sorted collection is used as 
+an item in a collection of unsequenced or sequenced collections, 
+( and )</p>
+
+<p>Note that code may check if two sorted collections has the same sorting order 
+by checking if the Comparer properties are equal. This is done a few places in this library
+for optimization purposes.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ISortedDictionary" href="../type/ISortedDictionary.html">ISortedDictionary</a>
+									</td>	
+									<td class="markdown">
+																						<p>A dictionary with sorted keys.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="IStack" href="../type/IStack.html">IStack</a>
+									</td>	
+									<td class="markdown">
+																						<p>The interface describing the operations of a LIFO stack data structure.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ItemAtEventArgs" href="../type/ItemAtEventArgs.html">ItemAtEventArgs</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ItemCountEventArgs" href="../type/ItemCountEventArgs.html">ItemCountEventArgs</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="KeyValuePair" href="../type/KeyValuePair2.html">KeyValuePair</a>
+									</td>	
+									<td class="markdown">
+																						<p>An entry in a dictionary from K to V.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="KeyValuePairComparer" href="../type/KeyValuePairComparer.html">KeyValuePairComparer</a>
+									</td>	
+									<td class="markdown">
+																						<p>Default comparer for dictionary entries in a sorted dictionary.
+Entry comparisons only look at keys and uses an externally defined comparer for that.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="KeyValuePairEqualityComparer" href="../type/KeyValuePairEqualityComparer.html">KeyValuePairEqualityComparer</a>
+									</td>	
+									<td class="markdown">
+																						<p>Default equalityComparer for dictionary entries.
+Operations only look at keys and uses an externaly defined equalityComparer for that.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="LinkedList" href="../type/LinkedList.html">LinkedList</a>
+									</td>	
+									<td class="markdown">
+																						<p>A list collection class based on a doubly linked list data structure.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="Logger" href="../type/Logger.html">Logger</a>
+									</td>	
+									<td class="markdown">
+																						<p>Logging module</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="NoSuchItemException" href="../type/NoSuchItemException.html">NoSuchItemException</a>
+									</td>	
+									<td class="markdown">
+																						<p>An exception thrown by a lookup or lookup with update operation that does not 
+find the lookup item and has no other means to communicate failure.</p>
+
+<p>The typical scenario is a lookup by key in a dictionary with an indexer,
+see e.g. </p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="NotAViewException" href="../type/NotAViewException.html">NotAViewException</a>
+									</td>	
+									<td class="markdown">
+																						<p>An exception thrown by an operation on a list (IList)
+that only makes sense for a view, not for an underlying list.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="NotComparableException" href="../type/NotComparableException.html">NotComparableException</a>
+									</td>	
+									<td class="markdown">
+																						<p>An exception thrown by an operation that need to construct a natural
+comparer for a type.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ReadOnlyCollectionException" href="../type/ReadOnlyCollectionException.html">ReadOnlyCollectionException</a>
+									</td>	
+									<td class="markdown">
+																						<p>An exception thrown by an update operation on a Read-Only collection or dictionary.</p>
+
+<p>This exception will be thrown unconditionally when an update operation 
+(method or set property) is called. No check is made to see if the update operation, 
+if allowed, would actually change the collection.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="Rec" href="../type/Rec3.html">Rec</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="Rec" href="../type/Rec2.html">Rec</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="Rec" href="../type/Rec.html">Rec</a>
+									</td>	
+									<td class="markdown">
+																						<p>A generic record type with two fields. </p>
+
+<p>Equality is defined field by field, using the Equals method 
+inherited from System.Object (i.e. using ).</p>
+
+<p>This type is similar to , but the latter
+uses  to define field equality instead of .</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="SequencedBase" href="../type/SequencedBase.html">SequencedBase</a>
+									</td>	
+									<td class="markdown">
+																						<p>Base class (abstract) for sequenced collection implementations.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="SequencedCollectionEqualityComparer" href="../type/SequencedCollectionEqualityComparer.html">SequencedCollectionEqualityComparer</a>
+									</td>	
+									<td class="markdown">
+																						<p>Prototype for a sequenced equalityComparer for something (T) that implements ISequenced[W].
+This will use ISequenced[W] specific implementations of the equality comparer operations.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="Showing" href="../type/Showing.html">Showing</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="SortedArray" href="../type/SortedArray.html">SortedArray</a>
+									</td>	
+									<td class="markdown">
+																						<p>A collection class implementing a sorted dynamic array data structure.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="SortedDictionaryBase" href="../type/SortedDictionaryBase.html">SortedDictionaryBase</a>
+									</td>	
+									<td class="markdown">
+																						<p>A base class for implementing a sorted dictionary based on a sorted set collection implementation.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="Sorting" href="../type/Sorting.html">Sorting</a>
+									</td>	
+									<td class="markdown">
+																						<p>A utility class with functions for sorting arrays with respect to an IComparer<T></p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="Speed" href="../type/Speed.html">Speed</a>
+									</td>	
+									<td class="markdown">
+																						<p>The symbolic characterization of the speed of lookups for a collection.
+The values may refer to worst-case, amortized and/or expected asymtotic 
+complexity wrt. the collection size.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="TreeBag" href="../type/TreeBag.html">TreeBag</a>
+									</td>	
+									<td class="markdown">
+																						<p>An implementation of Red-Black trees as an indexed, sorted collection with bag semantics,
+cf. . (TreeBag for an 
+implementation with set semantics).</p>
+
+<p>The comparer (sorting order) may be either natural, because the item type is comparable 
+(generic:  or non-generic: System.IComparable) or it can
+be external and supplied by the user in the constructor.</p>
+
+<p>Each distinct item is only kept in one place in the tree - together with the number
+of times it is a member of the bag. Thus, if two items that are equal according</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="TreeDictionary" href="../type/TreeDictionary.html">TreeDictionary</a>
+									</td>	
+									<td class="markdown">
+																						<p>A sorted generic dictionary based on a red-black tree set.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="TreeSet" href="../type/TreeSet.html">TreeSet</a>
+									</td>	
+									<td class="markdown">
+																						<p>An implementation of Red-Black trees as an indexed, sorted collection with set semantics,
+cf. . TreeBag for a version 
+with bag semantics. TreeDictionary for a sorted dictionary 
+based on this tree implementation.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="UnlistenableEventException" href="../type/UnlistenableEventException.html">UnlistenableEventException</a>
+									</td>	
+									<td class="markdown">
+																						
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="UnsequencedCollectionEqualityComparer" href="../type/UnsequencedCollectionEqualityComparer.html">UnsequencedCollectionEqualityComparer</a>
+									</td>	
+									<td class="markdown">
+																						<p>Prototype for an unsequenced equalityComparer for something (T) that implements ICollection[W]
+This will use ICollection[W] specific implementations of the equalityComparer operations</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="ViewDisposedException" href="../type/ViewDisposedException.html">ViewDisposedException</a>
+									</td>	
+									<td class="markdown">
+																						<p>An excption thrown when trying to access a view (a list view on a IList or 
+a snapshot on a IPersistentSorted)
+that has been invalidated by some earlier operation.</p>
+
+<p>The typical scenario is a view on a list that hash been invalidated by a call to 
+Sort, Reverse or Shuffle on some other, overlapping view or the whole list.</p>
+
+																			</td>
+								</tr>
+
+							
+								<tr  class="even" >
+									<td class="iconColumn">
+										<img alt="Class-Icon" src="../assets/images/icons/class_public.png">
+									</td>
+									<td>
+										<a title="WrappedArray" href="../type/WrappedArray.html">WrappedArray</a>
+									</td>	
+									<td class="markdown">
+																						<p>An advanced interface to operations on an array. The array is viewed as an 
+IList of fixed size, and so all operations that would change the
+size of the array will be invalid (and throw FixedSizeCollectionException</p>
+
+																			</td>
+								</tr>
+
+							
+						</tbody>
+					</table>
+				</div>
+
+				
+							</div>
+		</div>
+	   
+    </body>
+</html>
+
